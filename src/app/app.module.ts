@@ -22,6 +22,9 @@ import {FlashMessagesService} from 'angular2-flash-messages';
 import { AuthService } from './serwisy/auth.service';
 import {AuthGuard} from './guard/auth.guard';
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { HomeUserComponent } from './componenty/home-user/home-user.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,8 @@ import {AuthGuard} from './guard/auth.guard';
     HomeComponent,
     NavbarComponent,
     RejestracjaComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    HomeUserComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,7 @@ import {AuthGuard} from './guard/auth.guard';
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     FlashMessagesModule,
+    AngularFontAwesomeModule
   ],
   providers: [AuthService, AuthGuard, FlashMessagesService],
   bootstrap: [AppComponent]

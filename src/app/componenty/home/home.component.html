@@ -1,9 +1,20 @@
-<div class="jumbotron mt-3">
-  <h1 class="display-3">HOME PAGE</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
-</div>
+<ng-container>
+    <div class="calosc">
+      <h1 class="display-4">Witaj w MeetUpApp!</h1>
+      <p class="lead">MeetUpApp to darmowe i praktyczne rozwiązanie ułatwiające 
+        prowadzenie i uczestnictwo w spotkaniach. </p>
+      <p class="lead">Śledź każde niezrozumiałe słówko i nie przeocz ciekawego pytania.</p>
+      <hr class="my-4">
+      <p>Przekonaj się już dziś jak sprawnie to działa!</p>
+      <p>Zaloguj się i poznaj wszystkie możliwości aplikacji.</p>
+      <a class="button" [routerLink]="['/logowanie']" role="button" title="Zaloguj">Zaloguj juz teraz!</a>
+      <br>
+      <br>
+      <br>
+      <p> Nie posiadasz jeszcze konta? </p>
+      <a class="button" [routerLink]="['/rejestracja']" role="button" title="Dołącz do nas!">Zarejestruj</a>
+      <br>
+      <br>
+  
+    </div>
+  </ng-container>

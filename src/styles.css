@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+
+
 .alert.flash-message{
     margin-top:10px;
+}
+
+body{
+    background-image: url("http://www.ctcw.com.br/img/blog/Untitled-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 1px; 
 }

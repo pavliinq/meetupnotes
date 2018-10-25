@@ -10,6 +10,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 })
 export class LogowanieComponent implements OnInit {
 
+
   public email: string;
   public password: string; 
 
@@ -24,20 +25,20 @@ export class LogowanieComponent implements OnInit {
   onSubmitLogin() {
     this.authService.loginEmail(this.email, this.password)
     .then( (res) => {
-      this.flashMens.show('Usuario logado correctamente.',
+      this.flashMens.show('Poprawne logowanie',
       {cssClass: 'alert-success', timeout: 4000});
-      this.router.navigate(['/privado']);
+      this.router.navigate(['/home-user']);
     }).catch((err) => {
       this.flashMens.show(err.message,
       {cssClass: 'alert-danger', timeout: 4000});
-      this.router.navigate(['/login']);
+      this.router.navigate(['/logowanie']);
     });
   }
 
   onClickGoogleLogin() {
    this.authService.loginGoogle()
     .then((res) => {
-        this.router.navigate(['/privado']);
+        this.router.navigate(['/home-user']);
     }).catch( err => console.log(err.message));
   }
 

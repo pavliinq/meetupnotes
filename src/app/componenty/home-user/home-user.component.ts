@@ -4,11 +4,11 @@ import { AuthService } from '../../serwisy/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: 'app-home-user',
+  templateUrl: './home-user.component.html',
+  styleUrls: ['./home-user.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class HomeUserComponent implements OnInit {
   public isLogin: boolean;
   public nazwaUzytkownika: string;
   public emailUzytkownika: string;
@@ -27,11 +27,6 @@ export class NavbarComponent implements OnInit {
         this.isLogin = false;
       }
     });
-  }
-
-  onClickLogout() {
-    this.authService.logout();
-    this.router.navigate(['/']);
   }
 
 }

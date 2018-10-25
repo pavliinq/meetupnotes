@@ -4,6 +4,7 @@ import { LogowanieComponent } from './componenty/logowanie/logowanie.component';
 import { HomeComponent } from './componenty/home/home.component';
 import { RejestracjaComponent } from './componenty/rejestracja/rejestracja.component';
 import { NotFoundPageComponent } from './componenty/not-found-page/not-found-page.component';
+import { HomeUserComponent } from './componenty/home-user/home-user.component';
 
 import {AuthGuard} from './guard/auth.guard';
 
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'rejestracja', component: RejestracjaComponent},
   {path: 'not-found', component: NotFoundPageComponent},
+  {path: 'home-user', component: HomeUserComponent},
 ];
 
 
