@@ -7,6 +7,7 @@ import { NotFoundPageComponent } from './componenty/not-found-page/not-found-pag
 import { HomeUserComponent } from './componenty/home-user/home-user.component';
 
 import {AuthGuard} from './guard/auth.guard';
+import { DodajGrupaComponent } from './componenty/grupy/dodaj-grupa/dodaj-grupa.component';
 
 const routes: Routes = [
   {path: 'logowanie', component: LogowanieComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'rejestracja', component: RejestracjaComponent},
   {path: 'not-found', component: NotFoundPageComponent},
   {path: 'home-user', component: HomeUserComponent},
+  {path: 'dodaj-grupe', component: DodajGrupaComponent},
 ];
 
 

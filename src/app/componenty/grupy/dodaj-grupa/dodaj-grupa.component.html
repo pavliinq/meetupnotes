@@ -1,0 +1,37 @@
+<div class="calosc">
+  <form ngForm #f="ngForm" (ngSubmit)="dodajGrupe(f)" style="margin: 20px">
+<h1 style="margin: 50px">Stwórz nową grupę</h1>
+ 
+    <div class="card-body" style="margin: 50px">
+      <div class="row">
+        <div class="form-group col-lg-6">
+            <label 
+            for="nazwaGrupa" 
+            class="col-form-label" 
+            style="font-size:120%" >Nazwa Grupy:</label>
+            <input class="form-control" id="nazwaGrupa" placeholder="Wprowadź nazwę grupy" requried ngModel name ="nazwaGrupa" required type="text" class="form-control"
+            #nazwaGrupa ="ngModel">
+            <div class="alert alert-danger" *ngIf = "nazwaGrupa.touched && !nazwaGrupa.valid">Musisz nadać nazwę grupy!</div>
+
+            <label for="miasto" class="col-form-label" style="font-size:120%">Miasto:</label>
+            <input class="form-control" id="miasto" placeholder="np. Wrocław" requried ngModel name="miasto" required type="text" class="form-control" #miasto="ngModel">
+            <div class="alert alert-danger" *ngIf = "miasto.touched && !miasto.valid">
+              <div *ngIf = "miasto.errors.required"> Miasto grupy jest wymagane</div>
+            </div>
+            
+            <label for="prowadzacy" class="col-form-label" style="font-size:120%">Prowadzący/Organizacja:</label>
+            <input class="form-control" id="prowadzacy" placeholder="Prowadzący/organizacja" requried ngModel name ="prowadzacy" required type="text" class="form-control"
+            #prowadzacy ="ngModel" >
+            <div class="alert alert-danger" *ngIf = "prowadzacy.touched && !prowadzacy.valid">Wprowadź prowadzącego</div>
+
+            <label for="opis" class="col-form-label" style="font-size:120%"> Opis grupy:</label>
+            <textarea class="form-control" id="opis" placeholder="Opis grupy i jej tematyki" requried ngModel name ="opis" required type="text" class="form-control"
+            #opis ="ngModel" ></textarea>
+
+          </div>
+
+        </div>
+        <button type="button" class="btn btn-primary" [disabled]="!f.form.valid" (click)="dodajGrupe(f)" type="submit" routerLink="/home-user"> Stwórz grupę </button>
+      </div>
+    </form>
+  </div>
