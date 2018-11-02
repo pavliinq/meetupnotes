@@ -1,12 +1,18 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
 import * as firebase from 'firebase/app';
 import 'rxjs/add/operator/map';
+
+
 
 @Injectable()
 export class AuthService {
 
-  constructor(public afAuth: AngularFireAuth) { }
+
+  constructor(public afAuth: AngularFireAuth) { 
+        
+  }
 
   loginGoogle() {
     return this.afAuth.auth.signInWithPopup( new firebase.auth.GoogleAuthProvider());

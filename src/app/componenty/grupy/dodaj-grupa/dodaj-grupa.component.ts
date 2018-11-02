@@ -13,17 +13,22 @@ import { AuthService } from '../../../serwisy/auth.service';
 })
 export class DodajGrupaComponent implements OnInit {
   public isLogin: boolean;
+  public iduser: string;
   constructor(public authService: AuthService, private db: AngularFirestore, public grupaServe: GrupaService, private router: Router) { 
     this.authService.getAuth().subscribe( auth => {
       if (auth) {
         this.isLogin = true;
+        this.iduser = auth.uid;
       } else {
         this.isLogin = false;
       }
     });
   }
 
+
+
   ngOnInit() {
+    
   }
   
   dodajGrupe(f: NgForm) {
@@ -33,6 +38,7 @@ export class DodajGrupaComponent implements OnInit {
     grupa.prowadzacy= f.value.prowadzacy;
     grupa.miasto=f.value.miasto;
     grupa.opis = f.value.opis;
+    grupa.autor = this.iduser;
    
     this.grupaServe.setGrupa(grupa);
     f.resetForm();

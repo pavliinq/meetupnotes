@@ -1,0 +1,26 @@
+input.szukaj {
+    border: 2px solid #dbc43e; 
+    position: relative;
+    top: 5px;
+    border-radius: 3px;
+    padding: 10px 20px;
+  }
+  .buttons{
+    margin: 10px;
+  }
+  a.button{
+    margin: 5px;
+    color: #dbc43e;
+  }
+  h1.display-4{
+    margin: 10px;
+  }
+  .pokojStyle{
+      margin: 10px;
+      border-radius: 10px;
+
+  }
+  .pokojStyle:hover{
+      background:#f0f8ff;
+      cursor: pointer;
+  }

@@ -1,9 +1,8 @@
-export class Grupa {
+export class Pokoj {
     id?: string;
     nazwa?: string;
     data_utworzenia?: Date;
-    miasto?: string;
-    prowadzacy?: string;
-    opis?: string;
+    zapisani?: string[];
+    haslo?: string;
     autor?: string;
 }

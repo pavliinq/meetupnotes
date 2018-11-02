@@ -13,6 +13,7 @@ export class HomeUserComponent implements OnInit {
   public nazwaUzytkownika: string;
   public emailUzytkownika: string;
   public fotoUzytkownika: string;
+  public iduser: string;
 
   constructor(public authService: AuthService, public router: Router) { }
 
@@ -23,6 +24,7 @@ export class HomeUserComponent implements OnInit {
         this.nazwaUzytkownika = auth.displayName;
         this.emailUzytkownika = auth.email;
         this.fotoUzytkownika = auth.photoURL;
+        this.iduser = auth.uid;
       } else {
         this.isLogin = false;
       }

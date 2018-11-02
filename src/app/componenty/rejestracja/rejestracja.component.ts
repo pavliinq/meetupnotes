@@ -26,7 +26,7 @@ export class RejestracjaComponent implements OnInit {
     .then((res) => {
       this.flashMensaje.show('Konto zostało utworzone poprawnie.',
       {cssClass: 'alert-success', timeout: 4000});
-     this.router.navigate(['/logowanie']);
+     this.router.navigate(['/home-user']);
     }).catch( (err) => {
       this.flashMensaje.show(err.message,
       {cssClass: 'alert-danger', timeout: 4000});

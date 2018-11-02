@@ -10,6 +10,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { environment } from '../environments/environment';
 import { LogowanieComponent } from './componenty/logowanie/logowanie.component';
@@ -29,6 +30,20 @@ import { GrupaService } from './componenty/grupy/grupa.service';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HomeUserComponent } from './componenty/home-user/home-user.component';
 import { DodajGrupaComponent } from './componenty/grupy/dodaj-grupa/dodaj-grupa.component';
+import { GrupaComponent } from './componenty/grupy/grupa/grupa.component';
+import { ListaGrupaComponent } from './componenty/grupy/lista-grupa/lista-grupa.component';
+import { GrupyComponent } from './componenty/grupy/grupy/grupy.component';
+import { WidokGrupaComponent } from './componenty/grupy/widok-grupa/widok-grupa.component';
+import { PokojComponent } from './componenty/pokoje/pokoj/pokoj.component';
+import { DodajPokojComponent } from './componenty/pokoje/dodaj-pokoj/dodaj-pokoj.component';
+import { ListaPokojComponent } from './componenty/pokoje/lista-pokoj/lista-pokoj.component';
+import { ZapiszComponent } from './componenty/pokoje/zapisz/zapisz.component';
+import { PokojService } from './componenty/pokoje/pokoj.service';
+import { PokojWidokComponent } from './componenty/pokoje/pokoj-widok/pokoj-widok.component';
+import { DodajSlowoComponent } from './componenty/slowa/dodaj-slowo/dodaj-slowo.component';
+import { ListaSlowoComponent } from './componenty/slowa/lista-slowo/lista-slowo.component';
+import { SlowoComponent } from './componenty/slowa/slowo/slowo.component';
+import { SlowaService } from './componenty/slowa/slowa.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +54,19 @@ import { DodajGrupaComponent } from './componenty/grupy/dodaj-grupa/dodaj-grupa.
     RejestracjaComponent,
     NotFoundPageComponent,
     HomeUserComponent,
-    DodajGrupaComponent
+    DodajGrupaComponent,
+    GrupaComponent,
+    ListaGrupaComponent,
+    GrupyComponent,
+    WidokGrupaComponent,
+    PokojComponent,
+    DodajPokojComponent,
+    ListaPokojComponent,
+    ZapiszComponent,
+    PokojWidokComponent,
+    DodajSlowoComponent,
+    ListaSlowoComponent,
+    SlowoComponent
   ],
   imports: [
     BrowserModule,
@@ -48,13 +75,14 @@ import { DodajGrupaComponent } from './componenty/grupy/dodaj-grupa/dodaj-grupa.
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireDatabaseModule,
     FlashMessagesModule,
     AngularFontAwesomeModule
   ],
   providers: [AuthService, 
     AuthGuard, 
     FlashMessagesService, 
-    GrupaService,
+    GrupaService, PokojService, SlowaService,
     ],
   bootstrap: [AppComponent]
 })

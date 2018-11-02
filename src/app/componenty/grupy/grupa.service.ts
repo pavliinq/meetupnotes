@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestoreDocument, AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
 import { Grupa } from './grupa.model';
 import { Observable } from 'rxjs/Observable';
+import { AuthService } from '../../serwisy/auth.service';
 
 @Injectable()
 export class GrupaService {
@@ -9,6 +10,7 @@ export class GrupaService {
   grupaDocument: AngularFirestoreDocument<Grupa>;
   grupaCollection: AngularFirestoreCollection<Grupa[]>;
   grupa: Observable<Grupa[]>;
+  userId: string;
 
   constructor(public db: AngularFirestore) {
     this.grupaCollection = db.collection<Grupa[]>('/grupa');

@@ -10,7 +10,6 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 })
 export class LogowanieComponent implements OnInit {
 
-
   public email: string;
   public password: string; 
 

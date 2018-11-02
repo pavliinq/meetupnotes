@@ -1,0 +1,25 @@
+<div class="calosc">
+    <form ngForm #f="ngForm" (ngSubmit)="dodajPokoj(f)" style="margin: 20px">
+  <h1 style="margin: 50px">Stwórz nowy pokoj dla swojej grupy</h1>
+   
+      <div class="card-body" style="margin: 50px">
+        <div class="row">
+          <div class="form-group col-lg-6">
+              <label 
+              for="nazwaPokoj" 
+              class="col-form-label" 
+              style="font-size:120%" >Nazwa Pokoju:</label>
+              <input class="form-control" id="nazwaPokoj" placeholder="Wprowadź nazwę" requried ngModel name ="nazwaPokoj" required type="text" class="form-control"
+              #nazwaPokoj ="ngModel">
+              <div class="alert alert-danger" *ngIf = "nazwaPokoj.touched && !nazwaPokoj.valid">Musisz nadać nazwę!</div>
+            
+              <label for="hasloPokoj"  class="col-form-label" style="font-size:120%">Hasło dostępu</label>
+              <input type ="text" class="form-control" id="hasloPokoj" placeholder="Podaj hasło dostępu do pokoju dla uczestników" ngModel name="hasloPokoj" #hasloPokoj="ngModel">
+  
+            </div>
+  
+          </div>
+          <button type="button" class="btn btn-primary" [disabled]="!f.form.valid" (click)="dodajPokoj(f)" type="submit" [routerLink]="['/grupa', grupa.id] "> Utwórz pokój </button>
+        </div>
+      </form>
+    </div>
