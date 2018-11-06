@@ -1,3 +1,16 @@
 <p>
   lista-slowo works!
 </p>
+<h1 class="display-4">Dodane słowa:</h1>
+<div class="buttons">
+  <input class="szukaj" (keyup.control.1)="onKeydown($event)" (keyup)="onKey($event)" placeholder="Szukaj">
+</div> 
+<ul class="lista-slowo">
+  <ng-container *ngFor="let s of slowo">
+      <ng-container *ngIf="s.slowo.substring(0,values.length).toUpperCase() == values.toUpperCase()">
+          <li class="lista-slowo-item col-sm-7 slowoStyle">
+               <app-slowo [slowo]="s"></app-slowo>
+          </li>
+      </ng-container>
+  </ng-container>
+</ul>

@@ -13,7 +13,8 @@ export class ListaPokojComponent implements OnInit {
   public url:string[] = window.location.href.split('/');
   pokoj: Pokoj[];
   autor: string;
-  values: string = '';
+  values:string ='';
+  //values: string[] = [];
   onKey(event: any) { 
     this.values = event.target.value ;
   }

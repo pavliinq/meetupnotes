@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Router } from '@angular/router';
@@ -19,6 +19,8 @@ export class DodajPokojComponent implements OnInit {
   onKey(event: any) { 
     this.values = event.target.value ;
   }
+
+  //@Input('grupa') grupa: Grupa;
 
   public isLogin: boolean;
   public iduser: string;

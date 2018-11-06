@@ -1,3 +1,25 @@
-<p>
-  dodaj-slowo works!
-</p>
+<div class="calosc">
+    <!-- <h1 class="display-4" >
+      <ng-container>
+        {{pokoj.nazwa}}
+      </ng-container>
+    </h1> -->
+
+    <form ngForm #f="ngForm" (ngSubmit)="dodajSlowo(f)" style="margin: 20px">
+      
+      <div class="form-group row">
+        <input 
+            id="slowo" 
+            type="text" 
+            class="form-control col-4" 
+            placeholder="Wprowadź słowo"
+            ngModel name="slowo"  #slowo="ngModel"
+            required minlength="2">
+             
+        <button class="btn btn-light" [disabled]="!f.form.valid">Dodaj</button>
+      
+      </div>
+    </form>
+ 
+    <app-lista-slowo></app-lista-slowo>
+</div>

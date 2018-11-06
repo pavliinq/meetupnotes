@@ -31,8 +31,6 @@ export class ListaGrupaComponent implements OnInit {
   } */
 
   isLogin: boolean;
-  studenci: string[] = ["franko", "koza", "woza"];
-  student: string;
   values:string ='';
   account_type: string;
 
@@ -42,14 +40,11 @@ export class ListaGrupaComponent implements OnInit {
     this.values = event.target.value ;
   }
   
-  ngOnInit() {
-  
+  ngOnInit() { 
   }
-
 
   grupy: Grupa[];
   autor: string;
-  
  
   constructor(private db: AngularFirestore, public grupaServe: GrupaService, public authService: AuthService) {
     this.grupaServe.getGrupa().subscribe(data => { this.grupy = data; })

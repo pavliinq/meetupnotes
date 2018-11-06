@@ -1,21 +1,21 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Slowo } from '../slowo.model';
+import { Pytanie } from '../pytanie.model';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AuthService } from '../../../serwisy/auth.service';
-import { SlowaService } from '../slowa.service';
+import { PytaniaService } from '../pytania.service';
 
 @Component({
-  selector: 'app-slowo',
-  templateUrl: './slowo.component.html',
-  styleUrls: ['./slowo.component.css']
+  selector: 'app-pytanie',
+  templateUrl: './pytanie.component.html',
+  styleUrls: ['./pytanie.component.css']
 })
-export class SlowoComponent implements OnInit {
+export class PytanieComponent implements OnInit {
 
   public isLogin: boolean;
   url:string[] = window.location.href.split('/');
-  @Input('slowo') slowo: Slowo;
-  
-  constructor(private db: AngularFirestore, public as: AuthService, public slowoService: SlowaService) { 
+  @Input('pytanie') pytanie: Pytanie;
+
+  constructor(private db: AngularFirestore, public as: AuthService, public PytanieService: PytaniaService) {
     this.as.getAuth().subscribe( auth => {
       if (auth) {
         this.isLogin = true;
@@ -23,8 +23,8 @@ export class SlowoComponent implements OnInit {
         this.isLogin = false;
       }
     }
-  );
-  }
+  ); 
+   }
 
   ngOnInit() {
   }

@@ -12,13 +12,19 @@ import { AuthService } from '../../../serwisy/auth.service';
 export class PokojComponent implements OnInit {
 
   public isLogin: boolean;
+  public userid: string;
+  public zapisany_test: number;
+
   url:string[] = window.location.href.split('/');
+
   @Input('pokoj') pokoj: Pokoj;
   @Input('user') user: string;
+
   constructor(private db: AngularFirestore, public pokojService: PokojService, private authService: AuthService) {
     this.authService.getAuth().subscribe( auth => {
       if (auth) {
         this.isLogin = true;
+        this.userid = auth.uid;
       } else {
         this.isLogin = false;
       }
@@ -26,6 +32,18 @@ export class PokojComponent implements OnInit {
   );
    }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+    this.czyzapisany();
+  }
+
+  czyzapisany() {
+    this.zapisany_test = 0;
+    for (let zapisany of this.pokoj.zapisani) {
+      if (zapisany == this.userid) {
+        this.zapisany_test = ++this.zapisany_test;
+      }
+    }
+  }
 
 }

@@ -1,3 +1,33 @@
-<p>
-  zapisz works!
-</p>
+<div class="calosc">
+    <form ngForm #f="ngForm" (ngSubmit)="zapiszSie(f)" style="margin: 20px">
+      <div class="row">
+        <div class="form-group col-lg-4">
+          <label for="hasloPokoj" class="col-form-label" style="font-size:120%">Wprowadź hasło dostępu</label>
+          <input 
+            type="password" 
+            class="form-control" 
+            id="hasloPokoj" 
+            placeholder="Podaj hasło dostępu" 
+            ngModel name="hasloPokoj"
+            required
+            minlength="1"
+            #hasloPokoj="ngModel">
+            <div class = "alert alert-danger" *ngIf="zleHaslo">
+        
+                Podałeś złe hasło
+              
+            </div>
+  
+            <div class = "alert alert-success" *ngIf="dobreHaslo">
+        
+                Gratulacje zapisałeś się!
+              
+            </div>
+        </div>
+        
+      </div>
+      <button class="button" type="submit" [disabled]="!f.form.valid"  title="Zapisz się">Zapisz się</button>
+      <br>
+      <br>
+    </form>
+  </div>

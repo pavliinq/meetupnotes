@@ -13,6 +13,9 @@ import { GrupyComponent } from './componenty/grupy/grupy/grupy.component'
 import { WidokGrupaComponent } from './componenty/grupy/widok-grupa/widok-grupa.component';
 import { DodajPokojComponent } from './componenty/pokoje/dodaj-pokoj/dodaj-pokoj.component';
 import { PokojWidokComponent } from './componenty/pokoje/pokoj-widok/pokoj-widok.component';
+import { DodajSlowoComponent } from './componenty/slowa/dodaj-slowo/dodaj-slowo.component';
+import { DodajPytanieComponent } from './componenty/pytania/dodaj-pytanie/dodaj-pytanie.component';
+import { ZapiszComponent } from './componenty/pokoje/zapisz/zapisz.component';
 
 const routes: Routes = [
   {path: 'logowanie', component: LogowanieComponent},
@@ -26,7 +29,9 @@ const routes: Routes = [
   {path: 'grupa/:grupa_id', component: WidokGrupaComponent, canActivate: [AuthGuard]},
   {path: 'grupa/:grupa_id/dodaj-pokoj', component: DodajPokojComponent, canActivate: [AuthGuard]},
   {path: 'grupa/:grupa_id/:pokoj_id', component: PokojWidokComponent, canActivate: [AuthGuard]},
-  
+  {path: 'grupa/:grupa_id/:pokoj_id/dodaj-slowo', component: DodajSlowoComponent, canActivate: [AuthGuard]},
+  {path: 'grupa/:grupa_id/:pokoj_id/dodaj-pytanie', component: DodajPytanieComponent},
+  {path: 'zapisz/:kurs_id', component: ZapiszComponent},
 ];
 
 

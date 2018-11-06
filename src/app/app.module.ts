@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './routing.module';
 
-
 import { AppComponent } from './app.component';
 
 import { AngularFireModule } from 'angularfire2';
@@ -44,6 +43,10 @@ import { DodajSlowoComponent } from './componenty/slowa/dodaj-slowo/dodaj-slowo.
 import { ListaSlowoComponent } from './componenty/slowa/lista-slowo/lista-slowo.component';
 import { SlowoComponent } from './componenty/slowa/slowo/slowo.component';
 import { SlowaService } from './componenty/slowa/slowa.service';
+import { PytaniaService } from './componenty/pytania/pytania.service';
+import { PytanieComponent } from './componenty/pytania/pytanie/pytanie.component';
+import { DodajPytanieComponent } from './componenty/pytania/dodaj-pytanie/dodaj-pytanie.component';
+import { ListaPytanieComponent } from './componenty/pytania/lista-pytanie/lista-pytanie.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +69,10 @@ import { SlowaService } from './componenty/slowa/slowa.service';
     PokojWidokComponent,
     DodajSlowoComponent,
     ListaSlowoComponent,
-    SlowoComponent
+    SlowoComponent,
+    PytanieComponent,
+    DodajPytanieComponent,
+    ListaPytanieComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +88,7 @@ import { SlowaService } from './componenty/slowa/slowa.service';
   providers: [AuthService, 
     AuthGuard, 
     FlashMessagesService, 
-    GrupaService, PokojService, SlowaService,
+    GrupaService, PokojService, SlowaService, PytaniaService,
     ],
   bootstrap: [AppComponent]
 })
