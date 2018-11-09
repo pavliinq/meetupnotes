@@ -5,11 +5,10 @@
 </div> -->
 
 <ul class="lista-pokoj">
-    <ng-container *ngFor="let p of pokoj">
-        <ng-container *ngIf="p.nazwa.substring(0,values.length).toUpperCase() == values.toUpperCase()">
+    <ng-container *ngFor="let p of pokoje">
+ 
             <li class="lista-pokoj-item col-sm-7 pokojStyle">
                  <app-pokoj [pokoj]="p"></app-pokoj>
             </li>
-        </ng-container>
     </ng-container>
 </ul>

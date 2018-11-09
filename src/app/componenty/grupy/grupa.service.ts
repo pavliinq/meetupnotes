@@ -10,7 +10,7 @@ export class GrupaService {
   grupaDocument: AngularFirestoreDocument<Grupa>;
   grupaCollection: AngularFirestoreCollection<Grupa[]>;
   grupa: Observable<Grupa[]>;
-  userId: string;
+ // userId: string;
 
   constructor(public db: AngularFirestore) {
     this.grupaCollection = db.collection<Grupa[]>('/grupa');

@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { Grupa } from '../grupa.model';
 import { GrupaService } from '../grupa.service';
 import { AuthService } from '../../../serwisy/auth.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-lista-grupa',
@@ -14,37 +13,17 @@ import { Observable } from 'rxjs';
 })
 export class ListaGrupaComponent implements OnInit {
 
-/*   private isLogin: boolean;
-  grupy: Observable<any[]>;
-  allGrupy: any;
-
-  constructor(private db: AngularFireDatabase) {
-    this.grupy = db.list('/grupa').valueChanges();
-    this.grupy.subscribe(grupy => {
-      this.allGrupy = grupy;
-      console.log(this.allGrupy);
-    })
-    console.log(this.grupy);
-  }
-
-  onKeydown() {
-  } */
-
   isLogin: boolean;
   values:string ='';
-  account_type: string;
-
-  strona: string = window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
   modo:boolean;
+  grupy: Grupa[];
+
   onKey(event: any) { 
     this.values = event.target.value ;
   }
   
   ngOnInit() { 
   }
-
-  grupy: Grupa[];
-  autor: string;
  
   constructor(private db: AngularFirestore, public grupaServe: GrupaService, public authService: AuthService) {
     this.grupaServe.getGrupa().subscribe(data => { this.grupy = data; })
@@ -58,8 +37,7 @@ export class ListaGrupaComponent implements OnInit {
 
     }
     onKeydown(egg) {
-      
-      this.modo=true
+      this.modo=true;
     }
 
 }

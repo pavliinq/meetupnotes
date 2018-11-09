@@ -11,21 +11,21 @@
             style="font-size:120%" >Nazwa Grupy:</label>
             <input class="form-control" id="nazwaGrupa" placeholder="Wprowadź nazwę grupy" requried ngModel name ="nazwaGrupa" required type="text" class="form-control"
             #nazwaGrupa ="ngModel">
-            <div class="alert alert-danger" *ngIf = "nazwaGrupa.touched && !nazwaGrupa.valid">Musisz nadać nazwę grupy!</div>
+            <!-- <div class="alert alert-danger" *ngIf = "nazwaGrupa.touched && !nazwaGrupa.valid">Musisz nadać nazwę grupy!</div> -->
 
             <label for="miasto" class="col-form-label" style="font-size:120%">Miasto:</label>
             <input class="form-control" id="miasto" placeholder="np. Wrocław" requried ngModel name="miasto" required type="text" class="form-control" #miasto="ngModel">
-            <div class="alert alert-danger" *ngIf = "miasto.touched && !miasto.valid">
+<!--             <div class="alert alert-danger" *ngIf = "miasto.touched && !miasto.valid">
               <div *ngIf = "miasto.errors.required"> Miasto grupy jest wymagane</div>
-            </div>
+            </div> -->
             
             <label for="prowadzacy" class="col-form-label" style="font-size:120%">Prowadzący/Organizacja:</label>
             <input class="form-control" id="prowadzacy" placeholder="Prowadzący/organizacja" requried ngModel name ="prowadzacy" required type="text" class="form-control"
             #prowadzacy ="ngModel" >
-            <div class="alert alert-danger" *ngIf = "prowadzacy.touched && !prowadzacy.valid">Wprowadź prowadzącego</div>
+            <!-- <div class="alert alert-danger" *ngIf = "prowadzacy.touched && !prowadzacy.valid">Wprowadź prowadzącego</div> -->
 
             <label for="opis" class="col-form-label" style="font-size:120%"> Opis grupy:</label>
-            <textarea class="form-control" id="opis" placeholder="Opis grupy i jej tematyki" requried ngModel name ="opis" required type="text" class="form-control"
+            <textarea  id="opis" placeholder="Opis grupy i jej tematyki" requried ngModel name ="opis" required type="text" class="form-control"
             #opis ="ngModel" ></textarea>
 
           </div>

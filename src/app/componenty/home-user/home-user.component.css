@@ -1,4 +1,4 @@
-.display-4 {
+.powitanie {
 	margin-bottom: 30px;
 	font-size: 45px;
     font-family: 'Bitter', 'Quicksand', sans-serif;
@@ -9,11 +9,13 @@ a {
 	color: #dbc43e;
 }
 
+
+
 .calosc{
 	background: rgba(219, 218, 209, 0.85);
 	padding: 30px;
 	position: relative;
-  	width: 99%;
+  	width: 90%;
   	min-height: 200px;
 	margin: 0 auto;
   	margin-bottom: 75px;

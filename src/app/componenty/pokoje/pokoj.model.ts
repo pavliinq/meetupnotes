@@ -1,3 +1,4 @@
+
 export class Pokoj {
     id?: string;
     nazwa?: string;

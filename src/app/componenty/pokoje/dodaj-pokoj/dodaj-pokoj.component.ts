@@ -20,11 +20,10 @@ export class DodajPokojComponent implements OnInit {
     this.values = event.target.value ;
   }
 
-  //@Input('grupa') grupa: Grupa;
+  @Input('grupa') grupa: Grupa;
 
   public isLogin: boolean;
   public iduser: string;
-  public grupa: Grupa;
   // public url: string[] = window.location.href.split('/')
   public adres = window.location.href;
   url1 = this.adres.replace('/dodaj-pokoj','');
@@ -32,7 +31,7 @@ export class DodajPokojComponent implements OnInit {
   
 
   constructor(public authService: AuthService, private db: AngularFirestore,public grupaService: GrupaService, public pokojService: PokojService, private router: Router) { 
-    this.grupaService.getGrupa().subscribe(data => { this.grupa=data.filter(k => k.id==this.url[4])[0]; });
+    this.grupaService.getGrupa().subscribe(data => { this.grupa=data.filter(g => g.id==this.url[4])[0]; });
     this.authService.getAuth().subscribe( auth => {
       if (auth) {
         this.isLogin = true;
@@ -52,6 +51,7 @@ export class DodajPokojComponent implements OnInit {
     pokoj.haslo = f.value.hasloPokoj;
     pokoj.data_utworzenia = new Date();
     pokoj.autor = this.iduser;
+    pokoj.zapisani = [this.iduser];
 
     this.pokojService.setPokoj(pokoj,this.url[4]);
     f.resetForm();

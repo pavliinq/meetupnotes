@@ -1,7 +1,7 @@
 <div class="calosc">
     <ng-container *ngIf="grupa">Witaj w <b>{{grupa.nazwa}}</b>!</ng-container>
     <hr>
-  <a *ngIf="isLogin" [routerLink]="['/grupa/',url[4],'dodaj-pokoj']">Dodaj pokoj</a>
+  <a *ngIf="isAutor" [routerLink]="['/grupa/',url[4],'dodaj-pokoj']">Dodaj pokoj</a>
 
   <app-lista-pokoj></app-lista-pokoj>
 </div>

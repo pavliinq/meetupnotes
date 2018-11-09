@@ -8,9 +8,17 @@
     margin-top:10px;
 }
 
-body{
-    background-image: url("http://www.ctcw.com.br/img/blog/Untitled-2.jpg");
+/* body{
+    background-image: url("http://www.ctcw.com.br/img/blog/Untitled-2.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 1px; 
-}
+} */
+
+body { 
+    background: url("http://www.ctcw.com.br/img/blog/Untitled-2.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }

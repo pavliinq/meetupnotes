@@ -1,5 +1,5 @@
 <div class="row"> 
-  <ng-container *ngIf="zapisany_test === 0">
+  <ng-container *ngIf="zapisany_test === false">
     <div class="col-sm">{{pokoj.nazwa}}</div>
     <div>
       <a  class="button" [routerLink]="['/zapisz',pokoj.id]" title="Zapisz się">Zapisz się</a> 
@@ -7,7 +7,7 @@
   </ng-container>
   
 
-  <ng-container *ngIf="zapisany_test !== 0">
+  <ng-container *ngIf="zapisany_test === true ">
     <div class="col-sm" [routerLink]="['/grupa/', url[4], pokoj.id] ">{{pokoj.nazwa}}</div>
   </ng-container>
 </div>

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AuthService } from '../../../serwisy/auth.service';
-
 import { Router } from '@angular/router';
 import { GrupaService } from '../grupa.service';
 import { Grupa } from '../grupa.model';
@@ -13,26 +12,37 @@ import { Grupa } from '../grupa.model';
 export class WidokGrupaComponent implements OnInit {
 
   public isLogin: boolean;
-  public autor: string;
   public iduser: string;
-  grupa: Grupa;
+  @Input('grupa') grupa: Grupa;
+  public isAutor: boolean;
 
   url: string[] = window.location.href.split('/');
 
   constructor(public authService: AuthService, public grupaService: GrupaService) {
-    this.authService.getAuth().subscribe( auth => {
-      if (auth) {
-        this.isLogin = true;
-        this.autor = auth.displayName;
-        this.iduser = auth.uid;
-      } else {
-        this.isLogin = false;
-      }
-    });
     this.grupaService.getGrupa().subscribe(data => {this.grupa = data.filter(g => g.id==this.url[4])[0];});
   };
 
   ngOnInit() {
+
+    this.authService.getAuth().subscribe( auth => {
+      if (auth) {
+        this.isLogin = true;
+
+        this.iduser = auth.uid;
+        console.log(this.iduser)
+        //console.log('autor: ' +this.grupa.autor)
+        //console.log('id grupa: ' +this.grupa.id)
+
+        this.isAutor = true;
+        // if (this.grupa.autor == this.iduser) {
+        //   this.isAutor = true;
+        // } else {
+        //   this.isAutor = false;
+        // }
+      } else {
+        this.isLogin = false;
+      }  
+    });
   }
 
 }

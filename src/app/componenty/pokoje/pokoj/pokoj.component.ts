@@ -3,6 +3,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { PokojService } from '../pokoj.service';
 import { Pokoj } from '../pokoj.model';
 import { AuthService } from '../../../serwisy/auth.service';
+import { Grupa } from '../../grupy/grupa.model';
 
 @Component({
   selector: 'app-pokoj',
@@ -13,7 +14,8 @@ export class PokojComponent implements OnInit {
 
   public isLogin: boolean;
   public userid: string;
-  public zapisany_test: number;
+  public zapisany_test: boolean;
+  public idPokoj: string;
 
   url:string[] = window.location.href.split('/');
 
@@ -21,29 +23,28 @@ export class PokojComponent implements OnInit {
   @Input('user') user: string;
 
   constructor(private db: AngularFirestore, public pokojService: PokojService, private authService: AuthService) {
-    this.authService.getAuth().subscribe( auth => {
-      if (auth) {
-        this.isLogin = true;
-        this.userid = auth.uid;
-      } else {
-        this.isLogin = false;
-      }
-    }
-  );
-   }
+  }
 
   ngOnInit() {
+  this.authService.getAuth().subscribe( auth => {
+    if (auth) {
+      this.isLogin = true;
+      this.userid = auth.uid;
 
-    this.czyzapisany();
-  }
-
-  czyzapisany() {
-    this.zapisany_test = 0;
-    for (let zapisany of this.pokoj.zapisani) {
-      if (zapisany == this.userid) {
-        this.zapisany_test = ++this.zapisany_test;
+      for (let z of this.pokoj.zapisani) {
+        console.log('zapisani:' + z)
+        if ( z === this.userid) {
+          this.zapisany_test = true;
+          console.log('znalazlem');
+        } else {
+          this.zapisany_test = false;
+          console.log('nie znalazlem');
+        }
       }
+    } else {
+      this.isLogin = false;
     }
-  }
 
+  });
+}
 }

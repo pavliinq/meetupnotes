@@ -1,33 +1,62 @@
 <body>
   <div class="navbartlo">
-    
     <div class="global-nav">
-
-      <a routerLink="/"> 
+      <a *ngIf="!isLogin" routerLink="/"> 
         <div class="logo">
-          <span>MeetUpApp</span>
+          <span>MeetUpNotes</span>
         </div>
       </a>
-
+      <a *ngIf="isLogin" routerLink="/home-user"> 
+        <div class="logo">
+          <span>MeetUpNotes</span>
+        </div>
+      </a>
       <!-- MENU DESKTOPOWE-->
       <div class="menu">
         <a *ngIf="!isLogin" routerLink="/logowanie">Zaloguj</a>
         <a *ngIf="!isLogin" routerLink="/rejestracja">Zarejestruj</a>
-        <a *ngIf="isLogin" (click)="onClickLogout()">Wyloguj</a>
         <a *ngIf="isLogin" routerLink="/dodaj-grupe">Dodaj grupe</a>
         <a *ngIf="isLogin" routerLink="/grupy">Przeglądaj grupy</a>
-      </div>
+        <a *ngIf="isLogin" (click)="onClickLogout()">Wyloguj</a>
       
-    </div>
-
-        
-
-      <div class="nav-item" *ngIf="isLogin">
-        <a class="nav-link">{{nazwaUzytkownika}}</a>
-        <img src="{{fotoUzytkownika}}" class="rounded-circle">
-        <span class="badge pill badge-secondary">{{emailUzytkownika}}</span>
+      <a class="uzytkownik" *ngIf="isLogin">
+        <!-- <a class="nav-link">{{nazwaUzytkownika}}</a> -->
+        <img src="{{fotoUzytkownika}}" class="user-image">
+        <!-- <span class="badge pill badge-secondary">{{emailUzytkownika}}</span> -->
+      </a>
       </div>
 
-  </div>
+      <!-- MENU ROZSUWANE -->
 
+      <div class="open">
+
+        <span class="cls"></span>
+
+        <span>
+          <ul class="sub-menu">
+            <li>
+              <a routerLink="/" title="stronaglowna">Strona Główna</a>
+            </li>
+            <li>
+              <a *ngIf="isLogin" routerLink="/dodaj-grupe">Dodaj grupę</a>
+            </li>
+            <li>
+              <a *ngIf="isLogin" routerLink="/grupy">Przeglądaj grupy</a>
+            </li>
+            <li>
+              <a *ngIf="isLogin" (click)="onClickLogout()">Wyloguj</a>
+            </li>
+            <li>
+              <a *ngIf="!isLogin" routerLink="/rejestracja">Zarejestruj</a>
+            </li>
+            <li>
+              <a *ngIf="!isLogin" routerLink="/logowanie">Zaloguj</a>
+            </li>
+          </ul>
+        </span>
+        <span class="cls"></span>
+
+      </div>
+    </div>
+  </div>
 </body>
