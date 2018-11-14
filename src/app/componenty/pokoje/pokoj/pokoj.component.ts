@@ -32,13 +32,13 @@ export class PokojComponent implements OnInit {
       this.userid = auth.uid;
 
       for (let z of this.pokoj.zapisani) {
-        console.log('zapisani:' + z)
+        //console.log('zapisani:' + z)
         if ( z === this.userid) {
           this.zapisany_test = true;
-          console.log('znalazlem');
+          //console.log('znalazlem');
         } else {
           this.zapisany_test = false;
-          console.log('nie znalazlem');
+          //console.log('nie znalazlem');
         }
       }
     } else {

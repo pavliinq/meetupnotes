@@ -25,13 +25,12 @@ export class HomeUserComponent implements OnInit {
         this.emailUzytkownika = auth.email;
         this.fotoUzytkownika = auth.photoURL;
         this.iduser = auth.uid;
-        console.log(this.iduser)
       } else {
         this.isLogin = false;
       }
     });
 
-  console.log(this.iduser)
+
   }
 
 

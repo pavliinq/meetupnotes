@@ -31,7 +31,7 @@ const routes: Routes = [
   {path: 'grupa/:grupa_id/:pokoj_id', component: PokojWidokComponent, canActivate: [AuthGuard]},
   {path: 'grupa/:grupa_id/:pokoj_id/dodaj-slowo', component: DodajSlowoComponent, canActivate: [AuthGuard]},
   {path: 'grupa/:grupa_id/:pokoj_id/dodaj-pytanie', component: DodajPytanieComponent},
-  {path: 'zapisz/:kurs_id', component: ZapiszComponent},
+  {path: 'zapisz/:grupa_id/:pokoj_id', component: ZapiszComponent},
 ];
 
 
