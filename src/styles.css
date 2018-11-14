@@ -2,11 +2,18 @@
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Raleway:600i');
 
 
 .alert.flash-message{
     margin-top:10px;
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #e1e1de;
+  }
 
 /* body{
     background-image: url("http://www.ctcw.com.br/img/blog/Untitled-2.jpg"); 
@@ -15,10 +22,10 @@
     background-position: center 1px; 
 } */
 
-body { 
+/* body { 
     background: url("http://www.ctcw.com.br/img/blog/Untitled-2.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+  } */

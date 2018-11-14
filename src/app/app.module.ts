@@ -83,7 +83,7 @@ import { ListaPytanieComponent } from './componenty/pytania/lista-pytanie/lista-
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     FlashMessagesModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
   ],
   providers: [AuthService, 
     AuthGuard, 

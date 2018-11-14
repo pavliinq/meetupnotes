@@ -1,10 +1,12 @@
-<ng-container>
-    <div class="calosc">
+<!-- <ng-container>
+    <div class="img-home">
+      <div class="container">
       <h1 class="display-4">Witaj w MeetUpApp!</h1>
       <p class="lead">MeetUpApp to darmowe i praktyczne rozwiązanie ułatwiające 
         prowadzenie i uczestnictwo w spotkaniach. </p>
       <p class="lead">Śledź każde niezrozumiałe słówko i nie przeocz ciekawego pytania.</p>
       <hr class="my-4">
+      </div>
       <div class="linki">
       <p>Przekonaj się już dziś jak sprawnie to działa!</p>
       <p>Zaloguj się i poznaj wszystkie możliwości aplikacji.</p>
@@ -19,4 +21,51 @@
       </div>
   
     </div>
-  </ng-container>
+  </ng-container> -->
+<body>
+  <main>
+      <div class="tlo-container">
+        <div class="container">  
+          <h1>Witaj w MeetUpNotes!</h1>
+          <a href="#" class="btn-main" [routerLink]="['/logowanie']"> Zaloguj </a>
+          <br>
+          <p>Jesteś nowy? Nie posiadasz jeszcze konta?</p>
+          <a href="#" class="btn-main" [routerLink]="['/logowanie']"> Dołącz do nas! </a>
+
+        </div>
+      </div>
+    </main>
+
+    <section class="supporting">
+      <div class="container">
+        
+        <div class="col">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/design.svg">
+          <h2>Twórz grupy i pokoje</h2>
+          <p>Dodawaj nowe grupy dla swoich spotkań i zapraszaj do nich uczestników.</p>
+          <a class="btn" href="#"> Dodaj grupę</a><br>
+        </div>
+        
+        <div class="col">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/develop.svg">
+          <h2>Nadzoruj przebieg spotkania</h2>
+          <p>Miej kontrolę nad spotkaniem obserwując specjalny panel live.</p>
+          <a class="btn" href="#"> Moje grupy</a><br>
+        </div>
+        
+        <div class="col">
+          <i class="fas fa-marker"></i>
+          <h2>Bądź aktywnym uczestnikiem</h2>
+          <p>Zapisuj niezrozumiałe słowa i notuj interesujące Cię pytania, by inni też je widzieli.</p>
+          <a class="btn" href="#"> Znajdź grupę</a><br>
+        </div>
+        
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; MeetUpNotes 2018</p>
+      </div>
+    </footer>
+  </body>

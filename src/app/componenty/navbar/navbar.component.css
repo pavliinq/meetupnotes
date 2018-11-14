@@ -9,7 +9,7 @@ img {
     position: absolute;
       
     /* position: fixed; */
-    font-family:  'Pacifico', 'Damion', cursive;
+    font-family: 'Pacifico', 'Damion', cursive;
     font-size: 60px;
     width: 50%;
     text-align: center;
@@ -46,9 +46,9 @@ img {
   }
   
   .menu a{
-      color: #FFF;
+      color: #e0e0e2;
       text-decoration: none;
-      font-family: 'Bitter', 'Quicksand', sans-serif;
+      font-family: 'Raleway', 'Bitter', 'Quicksand', sans-serif;
       font-size: 20px;
       margin: 0px 5px;
       padding: 10px 10px;
