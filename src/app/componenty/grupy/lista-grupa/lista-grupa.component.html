@@ -1,19 +1,18 @@
 <ng-container>
-<div class="calosc">
-<h1 class="display-4">Utworzone grupy</h1>
-
 <div class="buttons">
   <input class="szukaj" (keyup.control.1)="onKeydown($event)" (keyup)="onKey($event)" placeholder="Szukaj">
 </div>
+<br>
+<br>
+<hr>
 
-<ul class="list-groupa ">
+<ul>
     <ng-container *ngFor="let g of grupy">
         <ng-container *ngIf="g.nazwa.substring(0,values.length).toUpperCase() == values.toUpperCase()">
-            <li class="list-group-item col-sm-7 kursStyle">
-                <app-grupa [user]="student" [grupa]="g"></app-grupa>
+            <li class="list-group-item col-sm-3 kursStyle">
+                <app-grupa [grupa]="g"></app-grupa>
             </li>
         </ng-container>
     </ng-container>
 </ul>
-</div>
 </ng-container>

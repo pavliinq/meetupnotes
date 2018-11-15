@@ -1,7 +1,24 @@
-<div class="calosc">
-    <ng-container *ngIf="grupa">Witaj w <b>{{grupa.nazwa}}</b>!</ng-container>
-    <hr>
-  <a *ngIf="isAutor" [routerLink]="['/grupa/',url[4],'dodaj-pokoj']">Dodaj pokoj</a>
+<body>
+    <main>
+    <div class="tlo-container">
+      <div class="container">
+    <h1>{{grupa.nazwa}}</h1>
+    <p>{{grupa.prowadzacy}}</p>
+    </div>
+    </div>
+    </main>
 
+
+    <section class="supporting">
+        <div class="container">
+          <div class="dane">
+          <p>Nazwa grupy: <br><b> {{grupa.nazwa}}</b></p>
+          <p>Misto: <br><b> {{grupa.miasto}}</b></p>
+          <p>Prowadzący: <br><b> {{grupa.prowadzacy}}</b></p>
+          <p>Opis grupy: <br><b> {{grupa.opis}}</b></p>
+        </div>
+  <a *ngIf="isAutor" [routerLink]="['/grupa/',url[4],'dodaj-pokoj']">Dodaj pokoj</a>
   <app-lista-pokoj></app-lista-pokoj>
 </div>
+</section>
+</body>

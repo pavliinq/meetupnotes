@@ -1,39 +1,21 @@
 input.szukaj {
-    border: 2px solid #dbc43e; 
+    border: 2px solid #ffffff; 
     position: relative;
     top: 5px;
     border-radius: 3px;
     padding: 10px 20px;
+    float: left;
   }
-  .buttons{
-    margin: 10px;
-  }
-  a.button{
-    margin: 5px;
-    color: #dbc43e;
-  }
-  h1.display-4{
-    margin: 10px;
-  }
+
   .kursStyle{
-      margin: 10px;
+      margin: 20px;
+      padding: 10px;
+      padding-bottom: 15px;
       border-radius: 10px;
-
+      background: rgb(255, 255, 255, 0.9);
   }
+
   .kursStyle:hover{
-      background:#f0f8ff;
       cursor: pointer;
+      border: 2px solid #dbc43e; 
   }
-
-  .calosc{
-    background: rgba(219, 218, 209, 0.85);
-    padding: 30px;
-    position: relative;
-      width: 90%;
-      min-height: 200px;
-    margin: 0 auto;
-      margin-bottom: 75px;
-      margin-top: 75px;
-    text-decoration: none;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    }

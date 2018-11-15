@@ -1,0 +1,19 @@
+.row h1 {
+    font-family: 'Raleway', sans-serif;
+    color: #dbc43e;
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.row h2 {
+    font-weight: 200;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #acaba5;
+}
+
+.row p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}

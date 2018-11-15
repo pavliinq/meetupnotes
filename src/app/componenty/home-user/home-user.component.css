@@ -23,8 +23,10 @@ main p {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   color: #e0e0e2;
+}
 
-
+main a {
+  color: #0f0f0d;
 }
 
 footer {
@@ -87,11 +89,6 @@ footer p {
   height: 200px;
 }
 
-.supporting img {
-  height: 32px;
-}
-
-
 .supporting h2 {
   font-weight: 600;
   font-size: 23px;
@@ -126,11 +123,21 @@ footer p {
 
 @media (max-width: 500px) {
   main h1 {
-    font-size: 50px;
+    font-size: 40px;
     padding: 0 40px;
+    margin-bottom: 20px;
+  }
+
+  main p {
+    font-size: 20px;
   }
 
   .supporting .col {
     width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .supporting {
+    padding-bottom: 20px;
   }
 }

@@ -55,6 +55,7 @@
     background: rgb(241, 240, 240);
     border-radius: 3px;
     border: 2px solid #dbc43e;
+    margin-top: 20px;
   }
 
   .btn-main-google {
@@ -69,6 +70,10 @@
     border-radius: 3px;
     border: 2px solid #d80c0c;
     cursor: pointer;
+  }
+
+  .form-group {
+    margin-bottom: 5px;
   }
 
   

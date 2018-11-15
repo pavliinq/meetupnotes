@@ -70,11 +70,6 @@ main p {
   height: 200px;
 }
 
-.supporting img {
-  height: 32px;
-}
-
-
 .supporting h2 {
   font-weight: 600;
   font-size: 23px;
@@ -93,7 +88,7 @@ main p {
   font-family: 'Raleway', sans-serif;
   color: #dbc43e;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 1.3px;
   padding: 10px 20px;
   text-decoration: none;
@@ -113,8 +108,21 @@ main p {
     padding: 0 40px;
   }
 
+  main p {
+    font-size: 20px;
+  }
+
+  .btn-main {
+    font-size: 14px;
+  }
+
   .supporting .col {
     width: 100%;
     margin-bottom: 40px;
   }
+
+  .supporting {
+    padding-bottom: 20px;
+  }
+
 }
