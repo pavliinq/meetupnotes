@@ -1,8 +1,12 @@
-<ng-container>
-    <div class="calosc">
+<body>
+  <main>
+      <div class="tlo-container">
+          <div class="container centered">
+
 
         <form (submit)="onSubmitAddUser()">
-          <h1 class="text-center">Zajerestruj</h1>
+            <div class="calosc">
+          <h1 class="text-center">Zajerestruj do MeetUpNotes</h1>
       
           <div class="form-group">
             <label for="email">Email</label>
@@ -12,8 +16,15 @@
             <label for="password">Hasło</label>
             <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control">
           </div>
-          <input type="submit" value="Zarejestruj" class="button btn btn-primary btn-block btn-lg">
+          <input type="submit" value="Zarejestruj" class="btn-main">
+          <p>lub</p>
+          <br>
+          <a class="btn-main-google" routerLink="/logowanie" ><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;&nbsp;Zaloguj z konta google</a>
+          
+        </div>
+       
         </form>
-
+</div>
   </div>
-</ng-container>
+</main>
+</body>

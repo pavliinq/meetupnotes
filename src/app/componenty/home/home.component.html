@@ -1,36 +1,12 @@
-<!-- <ng-container>
-    <div class="img-home">
-      <div class="container">
-      <h1 class="display-4">Witaj w MeetUpApp!</h1>
-      <p class="lead">MeetUpApp to darmowe i praktyczne rozwiązanie ułatwiające 
-        prowadzenie i uczestnictwo w spotkaniach. </p>
-      <p class="lead">Śledź każde niezrozumiałe słówko i nie przeocz ciekawego pytania.</p>
-      <hr class="my-4">
-      </div>
-      <div class="linki">
-      <p>Przekonaj się już dziś jak sprawnie to działa!</p>
-      <p>Zaloguj się i poznaj wszystkie możliwości aplikacji.</p>
-      <a class="button" [routerLink]="['/logowanie']" role="button" title="Zaloguj">Zaloguj juz teraz!</a>
-      <br>
-      <br>
-      <br>
-      <p> Nie posiadasz jeszcze konta? </p>
-      <a class="button" [routerLink]="['/rejestracja']" role="button" title="Dołącz do nas!">Zarejestruj</a>
-      <br>
-      <br>
-      </div>
-  
-    </div>
-  </ng-container> -->
 <body>
   <main>
       <div class="tlo-container">
         <div class="container">  
           <h1>Witaj w MeetUpNotes!</h1>
-          <a href="#" class="btn-main" [routerLink]="['/logowanie']"> Zaloguj </a>
+          <a class="btn-main" [routerLink]="['/logowanie']"> Zaloguj </a>
           <br>
           <p>Jesteś nowy? Nie posiadasz jeszcze konta?</p>
-          <a href="#" class="btn-main" [routerLink]="['/logowanie']"> Dołącz do nas! </a>
+          <a class="btn-main" [routerLink]="['/logowanie']"> Dołącz do nas! </a>
 
         </div>
       </div>
@@ -40,32 +16,30 @@
       <div class="container">
         
         <div class="col">
-          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/design.svg">
-          <h2>Twórz grupy i pokoje</h2>
+            <i class="fas fa-users fa-3x"></i>          <h2>Twórz grupy i pokoje</h2>
           <p>Dodawaj nowe grupy dla swoich spotkań i zapraszaj do nich uczestników.</p>
-          <a class="btn" href="#"> Dodaj grupę</a><br>
+          <a class="btn" routerLink="/dodaj-grupe"> Dodaj grupę</a><br>
         </div>
         
         <div class="col">
-          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/develop.svg">
-          <h2>Nadzoruj przebieg spotkania</h2>
+            <i class="fas fa-assistive-listening-systems fa-3x"></i>          <h2>Nadzoruj przebieg spotkania</h2>
           <p>Miej kontrolę nad spotkaniem obserwując specjalny panel live.</p>
           <a class="btn" href="#"> Moje grupy</a><br>
         </div>
         
         <div class="col">
-          <i class="fas fa-marker"></i>
+          <i class="fas fa-pen fa-3x"></i>
           <h2>Bądź aktywnym uczestnikiem</h2>
           <p>Zapisuj niezrozumiałe słowa i notuj interesujące Cię pytania, by inni też je widzieli.</p>
-          <a class="btn" href="#"> Znajdź grupę</a><br>
+          <a class="btn" routerLink="/grupy"> Znajdź grupę</a><br>
         </div>
         
       </div>
     </section>
 
-    <footer>
+    <!-- <footer>
       <div class="container">
         <p>&copy; MeetUpNotes 2018</p>
       </div>
-    </footer>
+    </footer> -->
   </body>

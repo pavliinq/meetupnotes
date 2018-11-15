@@ -47,6 +47,7 @@ import { PytaniaService } from './componenty/pytania/pytania.service';
 import { PytanieComponent } from './componenty/pytania/pytanie/pytanie.component';
 import { DodajPytanieComponent } from './componenty/pytania/dodaj-pytanie/dodaj-pytanie.component';
 import { ListaPytanieComponent } from './componenty/pytania/lista-pytanie/lista-pytanie.component';
+import { FooterComponent } from './componenty/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { ListaPytanieComponent } from './componenty/pytania/lista-pytanie/lista-
     SlowoComponent,
     PytanieComponent,
     DodajPytanieComponent,
-    ListaPytanieComponent
+    ListaPytanieComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

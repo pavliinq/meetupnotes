@@ -1,88 +1,136 @@
-.powitanie {
-	margin-bottom: 30px;
-	font-size: 45px;
-    font-family: 'Bitter', 'Quicksand', sans-serif;
-    text-align: center;
+
+main {
+  text-align: center;
+  position: relative;
+
+
 }
 
-a {
-	color: #dbc43e;
+main h1 {
+  color: #dbc43e;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  margin-top: 200px;
+  padding-top: 80px;
+  margin-bottom: 90px;
+
+}
+
+main p {
+  margin-top:50px;
+  margin-bottom: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color: #e0e0e2;
+
+
+}
+
+footer {
+  background-color: #c8c7c5;
+  color: #fff;
+  padding: 30px 0;
+}
+
+footer p {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.tlo-container {
+  height: 800px;
+  background-image: url("https://images.pexels.com/photos/7100/iphone-desk-laptop-notebook.jpg?auto=compress&cs=tinysrgb&h=750&w=1260"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.btn-main {
+  font-family: 'Raleway', sans-serif;
+  color: #dbc43e;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  padding: 16px 40px;
+  text-decoration: none;
+  background: rgb(241, 240, 240);
+  border-radius: 3px;
+  border: 2px solid #dbc43e;
 }
 
 
+.btn-main:hover {
+  text-decoration: none;
+  font-size: 20px;
+}
 
-.calosc{
-	background: rgba(219, 218, 209, 0.85);
-	padding: 30px;
-	position: relative;
-  	width: 90%;
-  	min-height: 200px;
-	margin: 0 auto;
-  	margin-bottom: 75px;
-  	margin-top: 75px;
-	text-decoration: none;
-	border: 1px solid rgba(0, 0, 0, 0.25);
+.supporting {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.supporting .col {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.supporting img {
+  height: 32px;
+}
+
+
+.supporting h2 {
+  font-weight: 600;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.supporting p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.supporting a {
+  font-family: 'Raleway', sans-serif;
+  color: #dbc43e;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background: rgb(241, 240, 240);
+  border-radius: 3px;
+  border: 2px solid #dbc43e; 
+}
+
+.supporting a:hover {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media (max-width: 500px) {
+  main h1 {
+    font-size: 50px;
+    padding: 0 40px;
   }
 
-	.button {
-    display: block;
-    float: left;
-    clear: both;
-    padding: 10px 40px;
-    background: rgb(241, 240, 240);
-    border-radius: 3px;
-    border: 2px solid #dbc43e;
-    overflow: hidden;
-	position: relative;
-  }
-
-  .button:after {
-    transition: -webkit-transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-    content: "";
-    position: absolute;
-    height: 200px;
-    width: 400px;
-    -webkit-transform: rotate(45deg) translateX(-540px) translateY(-100px);
-            transform: rotate(45deg) translateX(-540px) translateY(-100px);
-    background: #dbc43e;
-    z-index: 1;
-  }
-
-  .button:before {
-    transition: -webkit-transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    content: attr(title);
-    position: absolute;
-    top: 0;
-    left: 0;
+  .supporting .col {
     width: 100%;
-    height: 100%;
-    color: #fff;
-    z-index: 2;
-    text-align: center;
-    padding: 10px 20px;
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
   }
-
-  .button:hover {
-    text-decoration: none;
-  }
-
-  .button:hover:after {
-    -webkit-transform: translateX(-300px) translateY(-100px);
-            transform: translateX(-300px) translateY(-100px);
-  }
-  
-  .button:hover:before {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-
-.przejdz {
-	color: black;
-	text-decoration: none;
 }

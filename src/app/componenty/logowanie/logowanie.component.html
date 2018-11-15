@@ -1,7 +1,11 @@
-<ng-container>
-  <div class="calosc">
+<body>
+  <main>
+  <div class="tlo-container">
+    <div class="container centered">
+
   
     <form (submit)="onSubmitLogin()">
+        <div class="calosc">
       <h1 class="text-center" align="center">Zaloguj do MeetUpNotes</h1>
           
       <div class="form-group">
@@ -14,14 +18,15 @@
       </div>
       <div class="form-group">
 
-        <input class='button btn btn-primary btn-block btn-lg' type="submit" value="Zaloguj za pomocą e-mail">
-        <br>
-        <br>
+        <input class='btn-main' type="submit" value="Zaloguj za pomocą e-mail">
       </div>
-      
+      <p>lub</p>
+      <br>
+      <a class="btn-main-google"  (click)="onClickGoogleLogin()" ><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;&nbsp;Zaloguj z konta google</a>
+      </div>
     </form>
 
-    <button class="btn btn-primary btn-block btn-lg btn-google" (click)="onClickGoogleLogin()" ><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;&nbsp;Zaloguj z konta google</button>
-
+    </div>
   </div>
-</ng-container>
+  </main>
+</body>
