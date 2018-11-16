@@ -1,15 +1,31 @@
-<div class="calosc">
-  <a [routerLink]="['/grupa/',url[4], url[5],'dodaj-slowo']">Dodaj Slowo</a>
-  <a [routerLink]="['/grupa/',url[4], url[5],'dodaj-pytanie']">Dodaj Pytanie</a>
-<p>
+<body>
+  
+  <main>
+    <div class="tlo-container">
+      <div class="container">
+        
+        <h1>{{grupa.nazwa}}</h1>
+        <p>Live panel pokoju: {{pokoj.nazwa}}</p>
+      </div>
+    </div>
+  </main>
 
-</p>
-<div>
-<app-lista-slowo></app-lista-slowo>
-</div>
-<br>
-<hr>
-<div>
-<app-lista-pytanie></app-lista-pytanie>
-</div>
-</div>
+  <section class="supporting">
+  <div class="przyciski">
+    <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-slowo']">Dodaj Slowo</a>
+    <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-pytanie']">Dodaj Pytanie</a>
+  </div>
+  </section>
+  <hr>
+  <div class="container">
+    <app-lista-slowo></app-lista-slowo>
+  </div>
+  <br>
+  <hr>
+  <div class="container">
+    <app-lista-pytanie></app-lista-pytanie>
+  </div>
+  <br>
+  <a class="btn-delete" (click)="DeletePokoj(url[5], url[4])" [routerLink]="['/grupa/',url[4]]">Usuń pokój</a> 
+
+</body>

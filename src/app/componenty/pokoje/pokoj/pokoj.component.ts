@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AngularFirestore } from 'angularfire2/firestore';
 import { PokojService } from '../pokoj.service';
 import { Pokoj } from '../pokoj.model';
 import { AuthService } from '../../../serwisy/auth.service';
@@ -19,10 +18,10 @@ export class PokojComponent implements OnInit {
 
   url:string[] = window.location.href.split('/');
 
-  @Input('pokoj') pokoj: Pokoj;
-  @Input('user') user: string;
 
-  constructor(private db: AngularFirestore, public pokojService: PokojService, private authService: AuthService) {
+  @Input('pokoj') pokoj: Pokoj;
+
+  constructor(public pokojService: PokojService, private authService: AuthService) {
   }
 
   ngOnInit() {
@@ -47,4 +46,5 @@ export class PokojComponent implements OnInit {
 
   });
 }
+
 }

@@ -9,16 +9,30 @@
     </main>
 
 
-    <section class="supporting">
-        <div class="container">
-          <div class="dane">
+    <div class="container">
+      <div class="dane">
           <p>Nazwa grupy: <br><b> {{grupa.nazwa}}</b></p>
           <p>Misto: <br><b> {{grupa.miasto}}</b></p>
           <p>Prowadzący: <br><b> {{grupa.prowadzacy}}</b></p>
           <p>Opis grupy: <br><b> {{grupa.opis}}</b></p>
-        </div>
-  <a *ngIf="isAutor" [routerLink]="['/grupa/',url[4],'dodaj-pokoj']">Dodaj pokoj</a>
+      </div>
+    </div>
+
+    <hr>
+
+    <section class="supporting">
+        <div class="container">
+  <a class="btn-add" *ngIf="isAutor" [routerLink]="['/grupa/',url[4],'dodaj-pokoj']">Dodaj nowy pokoj</a>
+
+  <br> 
+  <br>
+  <br>
   <app-lista-pokoj></app-lista-pokoj>
 </div>
+
 </section>
+
+<a class="btn-delete" *ngIf="isAutor" (click)="DeleteGrupa(url[4])" [routerLink]="['/grupy']">Usuń grupę</a>
+
+
 </body>

@@ -1,7 +1,8 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { AuthService } from '../../../serwisy/auth.service';
 import { GrupaService } from '../grupa.service';
 import { Grupa } from '../grupa.model';
+import { AngularFirestoreDocument, AngularFirestore } from 'angularfire2/firestore';
 
 @Component({
   selector: 'app-widok-grupa',
@@ -9,6 +10,8 @@ import { Grupa } from '../grupa.model';
   styleUrls: ['./widok-grupa.component.css']
 })
 export class WidokGrupaComponent implements OnInit {
+
+  grupaDocument: AngularFirestoreDocument<Grupa>;
 
   isLogin: boolean;
   iduser: string;
@@ -18,7 +21,7 @@ export class WidokGrupaComponent implements OnInit {
   url: string[] = window.location.href.split('/');
   idGrupa: string = this.url[4];
 
-  constructor(public authService: AuthService, public grupaService: GrupaService) {
+  constructor(public authService: AuthService, public grupaService: GrupaService, public db: AngularFirestore) {
     this.authService.getAuth().subscribe( auth => {
       if (auth) {
         this.isLogin = true;
@@ -28,7 +31,7 @@ export class WidokGrupaComponent implements OnInit {
       }  
     });
     this.grupaService.getGrupa().subscribe( data => { 
-      this.grupa = data.filter(g => g.id == this.idGrupa)[0]; 
+      this.grupa = data.filter(g => g.id == this.idGrupa)[0];
       this.checkIsAutor();
     });
   };
@@ -38,7 +41,12 @@ export class WidokGrupaComponent implements OnInit {
   }
  
   ngOnInit() {
-    //this.isAutor = this.iduser == this.grupa.autor;
+
+  }
+
+  DeleteGrupa(idDokumentu) {
+    this.grupaDocument = this.db.doc('/grupa/' + idDokumentu);
+    this.grupaDocument.delete();
   }
 
 }

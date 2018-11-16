@@ -1,0 +1,98 @@
+
+  .container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+
+  }
+  
+  .tlo-container {
+    height: 700px;
+    background-image: url("https://images.pexels.com/photos/7100/iphone-desk-laptop-notebook.jpg?auto=compress&cs=tinysrgb&h=750&w=1260"); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  main {
+    text-align: center;
+    position: relative;
+  }
+  
+  main h1 {
+    color: #544f4c;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    margin-left: 70px;
+    margin-right: 70px;
+
+  }
+
+  main label, main p {
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: rgb(241, 240, 240);
+  }
+
+  .form-control {
+    border: 2px solid #ffffff; 
+    border-radius: 3px;
+    height:50px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-main {
+    font-family: 'Raleway', sans-serif;
+    color: #dbc43e;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.3px;
+    padding: 16px 40px;
+    text-decoration: none;
+    background: rgb(241, 240, 240);
+    border-radius: 3px;
+    border: 2px solid #dbc43e;
+    margin-top: 20px;
+  }
+
+.calosc{
+	background: rgba(219, 218, 209, 0.5);
+  padding: 20px;
+
+  width: 90%;
+	margin: 0 auto;
+  margin-bottom: 75px;
+  margin-top: 220px;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  .centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-group {
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: 500px) {
+    main h1 {
+      font-size: 30px;
+      padding: 0 40px;
+    }
+  
+    .btn-main {
+      font-size: 10px;
+    }
+
+    .calosc {
+      margin-top: 150px;
+    }
+  }

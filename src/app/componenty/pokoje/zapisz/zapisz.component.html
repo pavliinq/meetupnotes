@@ -1,8 +1,13 @@
-<div class="calosc">
+<body>
+    <main>
+        <div class="tlo-container">
+      <div class="conatiner centered">
+
     <form ngForm #f="ngForm" (ngSubmit)="zapiszSie(f)" style="margin: 20px">
+        <div class="calosc">
       <div class="row">
         <div class="form-group col-lg-4">
-          <label for="hasloPokoj" class="col-form-label" style="font-size:120%">Wprowadź hasło dostępu</label>
+          <h1 for="hasloPokoj" class="col-form-label" style="font-size:120%">Wprowadź hasło dostępu</h1>
           <input 
             type="password" 
             class="form-control" 
@@ -26,8 +31,12 @@
         </div>
         
       </div>
-      <button class="button" type="submit" [disabled]="!f.form.valid"  title="Zapisz się">Zapisz się</button>
+      <button class="btn-main" type="submit" [disabled]="!f.form.valid" >Zapisz się</button>
       <br>
       <br>
+    </div>
     </form>
   </div>
+</div>
+</main>
+</body>

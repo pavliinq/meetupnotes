@@ -23,7 +23,7 @@ main p {
 }
 
 .container {
-  max-width: 940px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 10px;
   text-align: center;
@@ -81,6 +81,10 @@ main p {
   main h1 {
     font-size: 50px;
     padding: 0 40px;
+  }
+
+  .supporting {
+    padding-bottom: 20px;
   }
 
 }

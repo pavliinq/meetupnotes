@@ -1,14 +1,11 @@
-<h1 class="display-4">Utworzone pokoje:</h1>
-<!-- 
-<div class="buttons">
-  <input class="szukaj" (keyup.control.1)="onKeydown($event)" (keyup)="onKey($event)" placeholder="Szukaj">
-</div> -->
+<ng-container>
+<h1>Utworzone pokoje:</h1>
 
-<ul class="lista-pokoj">
+<ul>
     <ng-container *ngFor="let p of pokoje">
- 
-            <li class="lista-pokoj-item col-sm-7 pokojStyle">
+            <li class="lista-pokoj-item  pokojStyle">
                  <app-pokoj [pokoj]="p"></app-pokoj>
             </li>
     </ng-container>
 </ul>
+</ng-container>

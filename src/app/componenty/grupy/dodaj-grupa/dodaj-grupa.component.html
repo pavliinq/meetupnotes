@@ -17,25 +17,19 @@
             style="font-size:120%" >Nazwa Grupy:</label>
             <input class="form-control" id="nazwaGrupa" requried ngModel name ="nazwaGrupa" required type="text" class="form-control"
             #nazwaGrupa ="ngModel">
-            <!-- <div class="alert alert-danger" *ngIf = "nazwaGrupa.touched && !nazwaGrupa.valid">Musisz nadać nazwę grupy!</div> -->
 
             <label for="miasto" class="col-form-label" style="font-size:120%">Miasto:</label>
             <input class="form-control" id="miasto" requried ngModel name="miasto" required type="text" class="form-control" #miasto="ngModel">
-<!--             <div class="alert alert-danger" *ngIf = "miasto.touched && !miasto.valid">
-              <div *ngIf = "miasto.errors.required"> Miasto grupy jest wymagane</div>
-            </div> -->
-            
+
             <label for="prowadzacy" class="col-form-label" style="font-size:120%">Prowadzący/Organizacja:</label>
             <input class="form-control" id="prowadzacy" requried ngModel name ="prowadzacy" required type="text" class="form-control"
             #prowadzacy ="ngModel" >
-            <!-- <div class="alert alert-danger" *ngIf = "prowadzacy.touched && !prowadzacy.valid">Wprowadź prowadzącego</div> -->
 
             <label for="opis" class="col-form-label" style="font-size:120%"> Opis grupy:</label>
             <textarea  id="opis" requried ngModel name ="opis" required type="text" class="form-control"
             #opis ="ngModel" ></textarea>
 
           </div>
-
         </div>
         <button type="button" class="btn-main" [disabled]="!f.form.valid" (click)="dodajGrupe(f)" type="submit" routerLink="/grupy"> Stwórz grupę </button>
       </div>

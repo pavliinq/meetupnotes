@@ -1,3 +1,4 @@
+
 .row h1 {
     font-family: 'Raleway', sans-serif;
     color: #dbc43e;
@@ -16,4 +17,19 @@
 .row p {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
+}
+
+
+@media (max-width: 500px) {
+   .row h1 {
+      font-size: 18px;
+    }
+
+    .row h2 {
+        font-size:10px;
+    }
+
+    .row p {
+        font-size: 12px;
+    }
 }

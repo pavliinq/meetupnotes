@@ -1,16 +1,17 @@
-<p>
-  lista-pytanie works!
-</p>
-<h1 class="display-4">Dodane pytania:</h1>
+<ng-container>
+<h1>Dodane pytania:</h1>
 <div class="buttons">
   <input class="szukaj" (keyup.control.1)="onKeydown($event)" (keyup)="onKey($event)" placeholder="Szukaj">
 </div> 
-<ul class="lista-slowo">
+<br>
+<br>
+<hr>
+
+<ul>
   <ng-container *ngFor="let p of pytanie">
-      <ng-container *ngIf="p.pytanie.substring(0,values.length).toUpperCase() == values.toUpperCase()">
-          <li class="lista-pytanie-item col-sm-7 pytanieStyle">
+          <li class="lista-pytanie-item pytanieStyle">
                <app-pytanie [pytanie]="p"></app-pytanie>
           </li>
-      </ng-container>
   </ng-container>
 </ul>
+</ng-container>

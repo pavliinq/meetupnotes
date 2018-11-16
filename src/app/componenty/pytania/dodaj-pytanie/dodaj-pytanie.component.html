@@ -1,12 +1,8 @@
-<div class="calosc">
-  <!-- <h1 class="display-4" >
-    <ng-container>
-      {{pokoj.nazwa}}
-    </ng-container>
-  </h1> -->
-
+<body>
+    <main class="tlo-container">
+    <div class="container centered">
   <form ngForm #f="ngForm" (ngSubmit)="dodajPytanie(f)" style="margin: 20px">
-    
+      <div class="calosc">
     <div class="form-group row">
       <input 
           id="pytanie" 
@@ -14,12 +10,15 @@
           class="form-control col-4" 
           placeholder="Wprowadź pytanie"
           ngModel name="pytanie"  #pytanie="ngModel"
-          required minlength="2">
-           
-      <button class="btn btn-light" [disabled]="!f.form.valid">Dodaj</button>
-    
+          required minlength="2">    
+      <button class="btn-main" [disabled]="!f.form.valid">Dodaj</button>
+    </div>
     </div>
   </form>
-
+  </div>
+  </main>
+ 
+  <div class="container">
   <app-lista-pytanie></app-lista-pytanie>
-</div>
+  </div>
+</body>

@@ -1,5 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Pokoj } from '../pokoj.model';
+import { AngularFirestoreDocument, AngularFirestore } from 'angularfire2/firestore';
+import { Grupa } from '../../grupy/grupa.model';
+import { GrupaService } from '../../grupy/grupa.service';
+import { PokojService } from '../pokoj.service';
+
 
 
 @Component({
@@ -9,17 +14,29 @@ import { Pokoj } from '../pokoj.model';
 })
 export class PokojWidokComponent implements OnInit {
 
+  pokojDocument: AngularFirestoreDocument<Pokoj>
   url: string[] = window.location.href.split('/');
-  //url1: string = window.location.href.substr(window.location.href.lastIndexOf('/') + 1, 20);
+  grupa: Grupa;
+  pokoj: Pokoj;
+  idGrupa: string = this.url[4];
+  idPokoj: string = this.url[5];
 
-
-  // public adres = window.location.href;
-  // url11 = this.adres.replace('this.url','');
-  // url1 = this.url11.split('/');
-
-  constructor() { }
+  constructor(public db: AngularFirestore, public grupaService: GrupaService, public pokojService: PokojService) {
+    console.log(this.idGrupa);
+    console.log(this.idPokoj)
+    this.grupaService.getGrupa().subscribe( data => {
+      this.grupa = data.filter(g => g.id == this.idGrupa)[0];
+    })
+    this.pokojService.getPokoj(this.idGrupa).subscribe( data => {
+      this.pokoj = data.filter(p => p.id == this.idPokoj)[0];
+    })
+   }
 
   ngOnInit() {
   }
 
+  DeletePokoj(idDokumentu, url) {
+    this.pokojDocument = this.db.doc('/grupa/'+url+'/pokoje/' + idDokumentu);
+    this.pokojDocument.delete();
+  }
 }

@@ -1,24 +1,33 @@
-<div class="calosc">
+<body>
+    <main>
+        <div class="tlo-container">
+      <div class="conatiner centered">
+
     <form ngForm #f="ngForm" (ngSubmit)="dodajPokoj(f)" style="margin: 20px">
-  <h1 style="margin: 50px">Stwórz nowy pokoj dla swojej grupy</h1>
+        <div class="calosc">
+      <h1>Utwórz nowy pokój</h1>
    
       <div class="card-body" style="margin: 50px">
         <div class="row">
-          <div class="form-group col-lg-6">
+          <div class="form-group">
               <label 
               for="nazwaPokoj" 
               class="col-form-label" 
               style="font-size:120%" >Nazwa Pokoju:</label>
-              <input class="form-control" id="nazwaPokoj" placeholder="Wprowadź nazwę" requried ngModel name ="nazwaPokoj" type="text" #nazwaPokoj ="ngModel">
+              <input class="form-control" id="nazwaPokoj"requried ngModel name ="nazwaPokoj" type="text" #nazwaPokoj ="ngModel">
             
               <label for="hasloPokoj"  
               class="col-form-label"
               style="font-size:120%" >Hasło dostępu:</label>
-              <input class="form-control" id="hasloPokoj" placeholder="Podaj hasło dostępu do pokoju dla uczestników" required ngModel name="hasloPokoj" type="text" #hasloPokoj="ngModel">
+              <input class="form-control" id="hasloPokoj" required ngModel name="hasloPokoj" type="text" #hasloPokoj="ngModel">
 
             </div>
           </div>
-          <button type="button" class="btn btn-primary" [disabled]="!f.form.valid" (click)="dodajPokoj(f)" type="submit" [routerLink]="['/grupa', grupa.id] "> Utwórz pokój </button>
+          <button type="button" class="btn-main" [disabled]="!f.form.valid" (click)="dodajPokoj(f)" type="submit" [routerLink]="['/grupa', grupa.id] "> Utwórz pokój </button>
         </div>
+      </div>
       </form>
+      </div>
     </div>
+    </main>
+    </body>

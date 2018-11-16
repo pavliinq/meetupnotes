@@ -1,0 +1,29 @@
+
+.row h1 {
+    font-family: 'Raleway', sans-serif;
+    color: #dbc43e;
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.btn-main {
+    font-family: 'Raleway', sans-serif;
+    color: #86827f;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.3px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 500px) {
+    .row h1 {
+        font-size: 18px;
+      }
+
+      .btn-main {
+        font-size: 10px;
+      }
+  }

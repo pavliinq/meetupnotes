@@ -30,10 +30,7 @@ main p {
   text-align: center;
 }
 
-.dane {
-	float: left;
-	text-align: left;
-}
+
 .tlo-container {
   height: 550px;
   background-image: url("https://images.pexels.com/photos/7100/iphone-desk-laptop-notebook.jpg?auto=compress&cs=tinysrgb&h=750&w=1260"); 
@@ -44,8 +41,31 @@ main p {
 }
 
 .supporting {
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 100px;
+}
+
+
+.dane {
+	float: left;
+  text-align: left;
+  margin-top: 50px;
+  padding: 0 50px; 
+}
+
+.dane p {
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+
+}
+
+.dane b {
+  color: #8d8c88;
+}
+
+hr {
+  width: 80%;
 }
 
 .supporting h2 {
@@ -62,7 +82,7 @@ main p {
   margin-bottom: 20px;
 }
 
-.supporting a {
+.btn-add {
   font-family: 'Raleway', sans-serif;
   color: #dbc43e;
   font-weight: 600;
@@ -72,7 +92,24 @@ main p {
   text-decoration: none;
   background: rgb(241, 240, 240);
   border-radius: 3px;
-  border: 2px solid #dbc43e; 
+  border: 2px solid #dbc43e;
+  float: left; 
+  margin-right: 20px;
+}
+
+.btn-delete {
+  color: #8b8669;
+  border: 2px solid #8b8669;
+  float: right; 
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background: rgb(241, 240, 240);
+  border-radius: 3px;
+  margin-right: 100px;
 }
 
 .supporting a:hover {
@@ -86,6 +123,15 @@ main p {
   main h1 {
     font-size: 50px;
     padding: 0 40px;
+    margin-top: 170px;
+  }
+
+  .supporting {
+    padding-bottom: 20px;
+  }
+
+  .tlo-container {
+    height: 400px;
   }
 
 }

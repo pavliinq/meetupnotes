@@ -1,12 +1,141 @@
-.calosc{
-	background: rgba(219, 218, 209, 0.85);
-	padding: 30px;
-	position: relative;
-  	width: 80%;
-  	min-height: 200px;
-	margin: 0 auto;
-  	margin-bottom: 100px;
-  	margin-top: 100px;
-	text-decoration: none;
-	border: 1px solid rgba(0, 0, 0, 0.25);
+main {
+  text-align: center;
+  position: relative;
+}
+
+main h1 {
+  color: #dbc43e;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  margin-top: 200px;
+  padding-top: 80px;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+}
+
+main p {
+  margin-top:50px;
+  margin-bottom: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  color: #e0e0e2;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.przyciski {
+	max-width: 500px;
+	margin: 50px auto;
+	padding: 0 10px;
+	text-align: center;
+}
+
+
+.tlo-container {
+  height: 550px;
+  background-image: url("https://images.pexels.com/photos/7100/iphone-desk-laptop-notebook.jpg?auto=compress&cs=tinysrgb&h=750&w=1260"); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.supporting {
+  padding-top: 10px;
+
+}
+
+
+.dane {
+	float: left;
+  text-align: left;
+  margin-top: 50px;
+  padding: 0 50px; 
+}
+
+.dane p {
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+
+}
+
+.dane b {
+  color: #8d8c88;
+}
+
+hr {
+  width: 80%;
+}
+
+.supporting h2 {
+  font-weight: 600;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.supporting p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.btn-main {
+  font-family: 'Raleway', sans-serif;
+  color: #dbc43e;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1.3px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background: rgb(241, 240, 240);
+  border-radius: 3px;
+  border: 2px solid #dbc43e;
+  margin: 0 10px;
+}
+
+.btn-delete {
+  color: #8b8669;
+  border: 2px solid #8b8669;
+  float: right; 
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background: rgb(241, 240, 240);
+  border-radius: 3px;
+  margin-right: 100px;
+}
+
+.supporting a:hover {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+
+@media (max-width: 500px) {
+  main h1 {
+    font-size: 50px;
+		padding: 0 40px;
+		margin-top: 170px;
   }
+
+	.tlo-container {
+		height: 400px;
+	}
+
+	.btn-main {
+		font-size: 12px;
+	}
+}

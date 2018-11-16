@@ -87,7 +87,7 @@ img {
       text-decoration: none;
       color: #DAA520;
       opacity: 0.9;
-      padding-left: 15px;
+      padding-left: 20px;
     }
     .navbartlo{    
       background-color: rgba(12, 12, 12, 0.7);;
@@ -229,6 +229,18 @@ img {
         @media (max-width: 500px) {
           .logo {
             font-size: 30px;
+          }
+
+          .header {
+            height: 120px;
+          }
+
+          .global-nav{
+            line-height: 120px;
+          }
+
+          .open {
+            top: 50px;
           }
         }
         

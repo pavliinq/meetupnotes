@@ -7,15 +7,22 @@ input.szukaj {
     float: left;
   }
 
-  .kursStyle{
-      margin: 20px;
-      padding: 10px;
+  .grupaStyle{
+      margin: 10px;
+      padding: 5px;
       padding-bottom: 15px;
       border-radius: 10px;
-      background: rgb(255, 255, 255, 0.9);
+      background: rgb(255, 255, 255, 0.8);
+      width: 200px;
   }
 
-  .kursStyle:hover{
+  .grupaStyle:hover{
       cursor: pointer;
       border: 2px solid #dbc43e; 
+  }
+
+  @media (max-width: 500px) {
+      .grupaStyle {
+          width: 85%;
+      }
   }
