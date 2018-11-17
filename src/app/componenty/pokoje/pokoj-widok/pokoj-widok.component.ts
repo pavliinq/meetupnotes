@@ -4,6 +4,7 @@ import { AngularFirestoreDocument, AngularFirestore } from 'angularfire2/firesto
 import { Grupa } from '../../grupy/grupa.model';
 import { GrupaService } from '../../grupy/grupa.service';
 import { PokojService } from '../pokoj.service';
+import { AuthService } from '../../../serwisy/auth.service';
 
 
 
@@ -20,16 +21,30 @@ export class PokojWidokComponent implements OnInit {
   pokoj: Pokoj;
   idGrupa: string = this.url[4];
   idPokoj: string = this.url[5];
+  autorPokoj: boolean;
+  user: string;
+  isLogin: boolean;
 
-  constructor(public db: AngularFirestore, public grupaService: GrupaService, public pokojService: PokojService) {
-    console.log(this.idGrupa);
-    console.log(this.idPokoj)
+  constructor(public as: AuthService, public db: AngularFirestore, public grupaService: GrupaService, public pokojService: PokojService) {
+    this.as.getAuth().subscribe( auth => {
+      if (auth) {
+        this.isLogin = true;
+        this.user = auth.uid;
+      } else {
+        this.isLogin = false;
+      }
+    });
     this.grupaService.getGrupa().subscribe( data => {
       this.grupa = data.filter(g => g.id == this.idGrupa)[0];
     })
     this.pokojService.getPokoj(this.idGrupa).subscribe( data => {
       this.pokoj = data.filter(p => p.id == this.idPokoj)[0];
+      this.czyAutorPokoj();
     })
+   }
+
+   czyAutorPokoj() {
+    this.autorPokoj = this.user == this.pokoj.autor;
    }
 
   ngOnInit() {

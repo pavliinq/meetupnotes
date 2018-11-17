@@ -26,7 +26,7 @@ export class SlowaService {
     return this.slowo;
   }
 
-  DeletePokoj(idDokumentu, url, url1) {
+  DeleteSlowo(idDokumentu, url, url1) {
     this.slowoDocument = this.db.doc('/grupa/'+url+'/pokoje/'+url1+'/slowa/' + idDokumentu);
     this.slowoDocument.delete();
   }

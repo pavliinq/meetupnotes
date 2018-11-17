@@ -1,3 +1,8 @@
 <div class="row">
   <p> {{slowo.slowo}}</p>
+  <p>{{slowo.autor}}</p>
+  
+  <p class="lead" style="margin: 5px;">{{numberOfLikes}}</p>
+  <button *ngIf="!autorSlowa && !autorPokoj" class="btn btn-outline-primary staleWymiary" (click)="giveLike()">Zagłosuj</button>
+  <button *ngIf="autorSlowa || autorPokoj" class="btn btn-outline-primary staleWymiary" (click)="deleteSlowo()">Usuń</button>
 </div> 

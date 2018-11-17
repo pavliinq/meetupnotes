@@ -10,7 +10,7 @@
     </div>
   </main>
 
-  <section class="supporting">
+  <section *ngIf="!autorPokoj" class="supporting">
   <div class="przyciski">
     <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-slowo']">Dodaj Slowo</a>
     <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-pytanie']">Dodaj Pytanie</a>

@@ -4,6 +4,7 @@ export class Slowo {
     data_dodania: Date;
     //dislikes: string[];
     likes: string[];
+    sumaLikes: number;
     slowo: string;
     
 }
