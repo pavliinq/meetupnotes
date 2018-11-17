@@ -1,5 +1,28 @@
 .row p {
     font-family: 'Raleway', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     margin: 0px;
+    display: inline;
+}
+
+.row p a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #cb9b24;
+}
+
+.number {
+    float: right;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    padding: 0 30px;
+}
+
+.btn-delete, .btn-vote {
+    float: right;
+    cursor: pointer;
+    text-decoration: none;
+    color: #cb9b24;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 6px;
 }

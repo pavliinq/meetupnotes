@@ -1,38 +1,39 @@
 <body>
-    <main>
+  <main>
     <div class="tlo-container">
       <div class="container">
-    <h1>{{grupa.nazwa}}</h1>
-    <p>{{grupa.prowadzacy}}</p>
-    </div>
-    </div>
-    </main>
-
-
-    <div class="container">
-      <div class="dane">
-          <p>Nazwa grupy: <br><b> {{grupa.nazwa}}</b></p>
-          <p>Misto: <br><b> {{grupa.miasto}}</b></p>
-          <p>Prowadzący: <br><b> {{grupa.prowadzacy}}</b></p>
-          <p>Opis grupy: <br><b> {{grupa.opis}}</b></p>
+        <h1>{{grupa.nazwa}}</h1>
+        <p>{{grupa.prowadzacy}}</p>
       </div>
     </div>
+  </main>
 
-    <hr>
+  <div class="container">
+    <div class="dane">
+        <p>Nazwa grupy: <br><b> {{grupa.nazwa}}</b></p>
+        <p>Misto: <br><b> {{grupa.miasto}}</b></p>
+        <p>Prowadzący: <br><b> {{grupa.prowadzacy}}</b></p>
+        <p>Opis grupy: <br><b> {{grupa.opis}}</b></p>
+    </div>
+  </div>
 
-    <section class="supporting">
-        <div class="container">
-  <a class="btn-add" *ngIf="isAutor" [routerLink]="['/grupa/',url[4],'dodaj-pokoj']">Dodaj nowy pokoj</a>
+  <hr>
 
-  <br> 
-  <br>
-  <br>
-  <app-lista-pokoj></app-lista-pokoj>
-</div>
+  <section class="supporting">
+    <div *ngIf="isAutor" class="container">
+      <a class="btn-add" [routerLink]="['/grupa/',url[4],'dodaj-pokoj']">Dodaj nowy pokoj</a>
+    </div>
 
-</section>
+    <div class="container">
+      <br> 
+      <br>
+      <br>
+      <app-lista-pokoj></app-lista-pokoj>
+    </div>
 
-<a class="btn-delete" *ngIf="isAutor" (click)="DeleteGrupa(url[4])" [routerLink]="['/grupy']">Usuń grupę</a>
 
+  </section>
+
+  <a class="btn-delete" *ngIf="isAutor" (click)="DeleteGrupa(url[4])" [routerLink]="['/grupy']">Usuń grupę</a>
 
 </body>

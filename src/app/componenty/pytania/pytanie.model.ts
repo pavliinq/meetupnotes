@@ -4,4 +4,5 @@ export class Pytanie {
     data_dodania: Date;
     likes: string[];
     pytanie: string;
+    sumaLikes: number;
 }

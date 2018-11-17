@@ -20,6 +20,10 @@ h1 {
 	margin-bottom: 10px;
 }
 
+li {
+  list-style-type: none;
+}
+
 @media (max-width: 500px) {
     .pytanieStyle {
         width: 85%;

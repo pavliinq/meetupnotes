@@ -1,42 +1,37 @@
 <body>
     <main>
-        <div class="tlo-container">
-      <div class="conatiner centered">
+      <div class="tlo-container">
+        <div class="conatiner centered">
 
-    <form ngForm #f="ngForm" (ngSubmit)="zapiszSie(f)" style="margin: 20px">
-        <div class="calosc">
-      <div class="row">
-        <div class="form-group col-lg-4">
-          <h1 for="hasloPokoj" class="col-form-label" style="font-size:120%">Wprowadź hasło dostępu</h1>
-          <input 
-            type="password" 
-            class="form-control" 
-            id="hasloPokoj" 
-            placeholder="Podaj hasło dostępu" 
-            ngModel name="hasloPokoj"
-            required
-            minlength="1"
-            #hasloPokoj="ngModel">
-            <div class = "alert alert-danger" *ngIf="zleHaslo">
-        
-                Podałeś złe hasło
-              
+          <form ngForm #f="ngForm" (ngSubmit)="zapiszSie(f)" style="margin: 20px">
+            <div class="calosc">
+
+                <div class="form-group row">
+                  <h1 for="hasloPokoj" class="col-form-label">Wprowadź hasło dostępu</h1>
+                  <input 
+                  type="password" 
+                  class="form-control" 
+                  id="hasloPokoj" 
+                  placeholder="Podaj hasło dostępu" 
+                  ngModel name="hasloPokoj"
+                  required
+                  minlength="1"
+                  #hasloPokoj="ngModel">
+                    <div class = "alert alert-danger" *ngIf="zleHaslo">
+                        Podałeś złe hasło
+                    </div>
+                    <div class = "alert alert-success" *ngIf="dobreHaslo">
+                      Gratulacje zapisałeś się!
+                    </div>
+                </div>
+
+              <button class="btn-main" type="submit" [disabled]="!f.form.valid" >Zapisz się</button>
+              <br>
+              <br>
             </div>
-  
-            <div class = "alert alert-success" *ngIf="dobreHaslo">
-        
-                Gratulacje zapisałeś się!
-              
-            </div>
+          </form>
+
         </div>
-        
       </div>
-      <button class="btn-main" type="submit" [disabled]="!f.form.valid" >Zapisz się</button>
-      <br>
-      <br>
-    </div>
-    </form>
-  </div>
-</div>
-</main>
+    </main>
 </body>
