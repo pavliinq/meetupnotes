@@ -23,17 +23,15 @@
     <div *ngIf="isAutor" class="container">
       <a class="btn-add" [routerLink]="['/grupa/',url[4],'dodaj-pokoj']">Dodaj nowy pokoj</a>
     </div>
-
     <div class="container">
       <br> 
       <br>
       <br>
       <app-lista-pokoj></app-lista-pokoj>
     </div>
-
-
   </section>
 
-  <a class="btn-delete" *ngIf="isAutor" (click)="DeleteGrupa(url[4])" [routerLink]="['/grupy']">Usuń grupę</a>
-
+  <div *ngIf="isAutor" class="container-usun">
+  <a (click)="DeleteGrupa(url[4])" [routerLink]="['/grupy']">Usuń grupę <i class="far fa-trash-alt"></i></a>
+</div>
 </body>

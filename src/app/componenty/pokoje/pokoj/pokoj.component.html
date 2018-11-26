@@ -1,4 +1,4 @@
-<div class="row"> 
+<!-- <div class="row"> 
   <ng-container *ngIf="zapisany_test === false">
     <h1>{{pokoj.nazwa}}</h1>
     <div>
@@ -9,5 +9,18 @@
 
   <ng-container *ngIf="zapisany_test === true ">
     <h1 [routerLink]="['/grupa/', url[4], pokoj.id] ">{{pokoj.nazwa}}</h1>
+  </ng-container>
+</div> -->
+
+
+<div class="row">
+  <ng-container>
+    <h1>{{pokoj.nazwa}}</h1>
+    <div *ngIf="!zapisany_test">
+      <a class="btn-main" [routerLink]="['/zapisz/', url[4] ,pokoj.id]">Zapisz się <i class="fas fa-user-plus"></i></a>
+    </div>
+    <div *ngIf="zapisany_test">
+      <a class="btn-main" [routerLink]="['/grupa/', url[4] ,pokoj.id]">Wejdź <i class="fas fa-sign-in-alt"></i></a>
+    </div>
   </ng-container>
 </div>

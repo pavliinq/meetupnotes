@@ -16,6 +16,7 @@ import { PokojWidokComponent } from './componenty/pokoje/pokoj-widok/pokoj-widok
 import { DodajSlowoComponent } from './componenty/slowa/dodaj-slowo/dodaj-slowo.component';
 import { DodajPytanieComponent } from './componenty/pytania/dodaj-pytanie/dodaj-pytanie.component';
 import { ZapiszComponent } from './componenty/pokoje/zapisz/zapisz.component';
+import { MojaListaGrupaComponent } from './componenty/grupy/moja-lista-grupa/moja-lista-grupa.component';
 
 const routes: Routes = [
   {path: 'logowanie', component: LogowanieComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'home-user', component: HomeUserComponent, canActivate: [AuthGuard]},
   {path: 'dodaj-grupe', component: DodajGrupaComponent, canActivate: [AuthGuard]},
   {path: 'lista-grupa', component: ListaGrupaComponent, canActivate: [AuthGuard]},
+  {path: 'moja-lista-grupa', component: MojaListaGrupaComponent, canActivate: [AuthGuard]},
   {path: 'grupy', component: GrupyComponent, canActivate: [AuthGuard]},
   {path: 'grupa/:grupa_id', component: WidokGrupaComponent, canActivate: [AuthGuard]},
   {path: 'grupa/:grupa_id/dodaj-pokoj', component: DodajPokojComponent, canActivate: [AuthGuard]},

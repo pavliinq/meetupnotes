@@ -1,0 +1,16 @@
+<ng-container>
+  <div class="buttons">
+    <a class="btn-main" routerLink="/dodaj-grupe">Dodaj nową grupę <i class="far fa-plus-square"></i></a>
+  </div>
+  <br>
+  <br>
+  <hr>
+  
+  <ul>
+      <ng-container *ngFor="let g of grupy">
+              <li class="list-group-item col-sm-3 grupaStyle">
+                  <app-grupa [grupa]="g"></app-grupa>
+              </li>
+      </ng-container>
+  </ul>
+  </ng-container>

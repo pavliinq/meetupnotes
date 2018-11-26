@@ -29,6 +29,22 @@ main p {
   text-align: center;
 }
 
+.container-usun {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.container-usun a {
+font-family: 'Raleway', sans-serif;
+font-size: 18px;
+margin: 0px;
+text-decoration: none;
+color: #838079;
+}
+
 .przyciski {
 	max-width: 500px;
 	margin: 50px auto;

@@ -4,6 +4,12 @@ main {
   position: relative;
 }
 
+h1 {
+  color: #dbc43e;
+  font-family: 'Raleway', sans-serif;
+
+}
+
 main h1 {
   color: #dbc43e;
   font-family: 'Raleway', sans-serif;
@@ -40,7 +46,7 @@ main p {
 
 .supporting {
   padding-top: 40px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .supporting h2 {

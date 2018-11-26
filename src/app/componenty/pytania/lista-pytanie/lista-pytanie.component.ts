@@ -15,6 +15,7 @@ export class ListaPytanieComponent implements OnInit {
   pytanie: Pytanie[];
   autor: string;
   values: string = '';
+  modo: boolean;
 
   onKey(event: any) {
     this.values = event.target.value;
@@ -29,6 +30,10 @@ export class ListaPytanieComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  onKeydown(egg) {
+    this.modo=true;
   }
 
 }

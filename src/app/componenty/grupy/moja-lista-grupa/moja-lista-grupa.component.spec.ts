@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotFoundPageComponent } from './not-found-page.component';
+import { MojaListaGrupaComponent } from './moja-lista-grupa.component';
 
-describe('NotFoundPageComponent', () => {
-  let component: NotFoundPageComponent;
-  let fixture: ComponentFixture<NotFoundPageComponent>;
+describe('MojaListaGrupaComponent', () => {
+  let component: MojaListaGrupaComponent;
+  let fixture: ComponentFixture<MojaListaGrupaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotFoundPageComponent ]
+      declarations: [ MojaListaGrupaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NotFoundPageComponent);
+    fixture = TestBed.createComponent(MojaListaGrupaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

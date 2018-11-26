@@ -15,6 +15,7 @@ export class ListaSlowoComponent implements OnInit {
   slowo: Slowo[];
   autor: string;
   values: string = '';
+  modo: boolean;
 
   onKey(event: any) {
     this.values = event.target.value;
@@ -29,6 +30,10 @@ export class ListaSlowoComponent implements OnInit {
    };
 
   ngOnInit() {
+  }
+
+  onKeydown(egg) {
+    this.modo=true;
   }
 
 }

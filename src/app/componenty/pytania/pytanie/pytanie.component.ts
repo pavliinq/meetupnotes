@@ -41,6 +41,7 @@ export class PytanieComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.numberLikes();
   }
 
   czyAutorPokoj() {

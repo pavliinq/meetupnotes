@@ -5,7 +5,7 @@
       <div class="container">
         
         <h1>{{grupa.nazwa}}</h1>
-        <p>Live panel pokoju: {{pokoj.nazwa}}</p>
+        <p>{{pokoj.nazwa}}</p>
       </div>
     </div>
   </main>
@@ -26,6 +26,7 @@
     <app-lista-pytanie></app-lista-pytanie>
   </div>
   <br>
-  <a class="btn-delete" (click)="DeletePokoj(url[5], url[4])" [routerLink]="['/grupa/',url[4]]">Usuń pokój</a> 
-
+  <div *ngIf="autorPokoj" class="container-usun">
+  <a (click)="DeletePokoj(url[5], url[4])" [routerLink]="['/grupa/',url[4]]">Usuń pokój <i class="far fa-trash-alt"></i></a> 
+</div>
 </body>

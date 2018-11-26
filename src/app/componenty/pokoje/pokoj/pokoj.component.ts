@@ -29,14 +29,15 @@ export class PokojComponent implements OnInit {
     if (auth) {
       this.isLogin = true;
       this.userid = auth.uid;
-
+      //console.log(this.userid)
+      //console.log(this.pokoj.zapisani)
       for (let z of this.pokoj.zapisani) {
         //console.log('zapisani:' + z)
         if ( z === this.userid) {
           this.zapisany_test = true;
           //console.log('znalazlem');
         } else {
-          this.zapisany_test = false;
+          //this.zapisany_test = false;
           //console.log('nie znalazlem');
         }
       }

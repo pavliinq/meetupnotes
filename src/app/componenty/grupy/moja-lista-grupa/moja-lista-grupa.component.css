@@ -1,0 +1,39 @@
+input.szukaj {
+    border: 2px solid #ffffff; 
+    position: relative;
+    top: 5px;
+    border-radius: 3px;
+    padding: 10px 20px;
+    float: left;
+  }
+
+  .grupaStyle{
+      margin: 10px;
+      padding: 5px;
+      padding-bottom: 15px;
+      border-radius: 10px;
+      background: rgb(255, 255, 255, 0.8);
+      width: 200px;
+  }
+
+  .grupaStyle:hover{
+      cursor: pointer;
+      border: 2px solid #dbc43e; 
+  }
+
+  a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+    display: inline;
+    text-decoration: none;
+    color: #838079;
+    cursor: pointer;
+    float: right;
+  }
+
+  @media (max-width: 500px) {
+      .grupaStyle {
+          width: 85%;
+      }
+  }

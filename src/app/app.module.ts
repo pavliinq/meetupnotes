@@ -48,6 +48,7 @@ import { PytanieComponent } from './componenty/pytania/pytanie/pytanie.component
 import { DodajPytanieComponent } from './componenty/pytania/dodaj-pytanie/dodaj-pytanie.component';
 import { ListaPytanieComponent } from './componenty/pytania/lista-pytanie/lista-pytanie.component';
 import { FooterComponent } from './componenty/footer/footer.component';
+import { MojaListaGrupaComponent } from './componenty/grupy/moja-lista-grupa/moja-lista-grupa.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { FooterComponent } from './componenty/footer/footer.component';
     PytanieComponent,
     DodajPytanieComponent,
     ListaPytanieComponent,
-    FooterComponent
+    FooterComponent,
+    MojaListaGrupaComponent
   ],
   imports: [
     BrowserModule,
