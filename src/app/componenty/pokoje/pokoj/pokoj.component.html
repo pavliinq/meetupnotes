@@ -16,10 +16,10 @@
 <div class="row">
   <ng-container>
     <h1>{{pokoj.nazwa}}</h1>
-    <div *ngIf="!zapisany_test">
+    <div *ngIf="!zapisany_test && !isAdmin">
       <a class="btn-main" [routerLink]="['/zapisz/', url[4] ,pokoj.id]">Zapisz się <i class="fas fa-user-plus"></i></a>
     </div>
-    <div *ngIf="zapisany_test">
+    <div *ngIf="zapisany_test || isAdmin">
       <a class="btn-main" [routerLink]="['/grupa/', url[4] ,pokoj.id]">Wejdź <i class="fas fa-sign-in-alt"></i></a>
     </div>
   </ng-container>

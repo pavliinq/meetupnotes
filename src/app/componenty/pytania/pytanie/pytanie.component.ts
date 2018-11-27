@@ -20,6 +20,7 @@ export class PytanieComponent implements OnInit {
   user: string;
   autorPytanie: boolean;
   autorPokoj: boolean;
+  isAdmin: boolean;
 
   numberOfLikes: number;
 
@@ -29,6 +30,8 @@ export class PytanieComponent implements OnInit {
         this.isLogin = true;
         this.user = auth.uid;
         this.autorPytanie = this.user == this.pytanie.autor;
+        this.isAdmin = auth.uid == 'Fohqwou3qSNWS11t6hq3VL5TgVG2';
+
       } else {
         this.isLogin = false;
       }

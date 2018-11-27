@@ -20,6 +20,7 @@ export class SlowoComponent implements OnInit {
   user: string;
   autorSlowa: boolean;
   autorPokoj: boolean;
+  isAdmin: boolean;
 
   numberOfLikes: number;
 
@@ -29,6 +30,7 @@ export class SlowoComponent implements OnInit {
         this.isLogin = true;
         this.user = auth.uid;
         this.autorSlowa = this.user == this.slowo.autor;
+        this.isAdmin = auth.uid == 'Fohqwou3qSNWS11t6hq3VL5TgVG2';
 
       } else {
         this.isLogin = false;

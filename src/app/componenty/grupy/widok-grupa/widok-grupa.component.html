@@ -31,7 +31,7 @@
     </div>
   </section>
 
-  <div *ngIf="isAutor" class="container-usun">
+  <div *ngIf="isAutor || isAdmin" class="container-usun">
   <a (click)="DeleteGrupa(url[4])" [routerLink]="['/grupy']">Usuń grupę <i class="far fa-trash-alt"></i></a>
 </div>
 </body>

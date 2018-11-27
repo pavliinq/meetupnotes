@@ -10,7 +10,7 @@
     </div>
   </main>
 
-  <section *ngIf="!autorPokoj" class="supporting">
+  <section *ngIf="!autorPokoj && !isAdmin" class="supporting">
   <div class="przyciski">
     <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-slowo']">Dodaj Slowo</a>
     <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-pytanie']">Dodaj Pytanie</a>
@@ -26,7 +26,7 @@
     <app-lista-pytanie></app-lista-pytanie>
   </div>
   <br>
-  <div *ngIf="autorPokoj" class="container-usun">
+  <div *ngIf="autorPokoj || isAdmin" class="container-usun">
   <a (click)="DeletePokoj(url[5], url[4])" [routerLink]="['/grupa/',url[4]]">Usuń pokój <i class="far fa-trash-alt"></i></a> 
 </div>
 </body>

@@ -13,6 +13,7 @@ export class NavbarComponent implements OnInit {
   public nazwaUzytkownika: string;
   public emailUzytkownika: string;
   public fotoUzytkownika: string;
+  public isAdmin: boolean;
 
   constructor(public authService: AuthService, public router: Router) { }
 
@@ -23,6 +24,7 @@ export class NavbarComponent implements OnInit {
         this.nazwaUzytkownika = auth.displayName;
         this.emailUzytkownika = auth.email;
         this.fotoUzytkownika = auth.photoURL;
+        this.isAdmin = auth.uid == 'Fohqwou3qSNWS11t6hq3VL5TgVG2';
       } else {
         this.isLogin = false;
       }

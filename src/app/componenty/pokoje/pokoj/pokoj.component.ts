@@ -15,6 +15,7 @@ export class PokojComponent implements OnInit {
   public userid: string;
   public zapisany_test: boolean;
   public idPokoj: string;
+  public isAdmin: boolean;
 
   url:string[] = window.location.href.split('/');
 
@@ -29,6 +30,7 @@ export class PokojComponent implements OnInit {
     if (auth) {
       this.isLogin = true;
       this.userid = auth.uid;
+      this.isAdmin = this.userid == 'Fohqwou3qSNWS11t6hq3VL5TgVG2';
       //console.log(this.userid)
       //console.log(this.pokoj.zapisani)
       for (let z of this.pokoj.zapisani) {

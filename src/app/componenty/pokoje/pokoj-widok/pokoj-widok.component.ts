@@ -23,13 +23,15 @@ export class PokojWidokComponent implements OnInit {
   idPokoj: string = this.url[5];
   autorPokoj: boolean;
   user: string;
-  isLogin: boolean;
-
+  isLogin: boolean; 
+  isAdmin: boolean;
+  
   constructor(public as: AuthService, public db: AngularFirestore, public grupaService: GrupaService, public pokojService: PokojService) {
     this.as.getAuth().subscribe( auth => {
       if (auth) {
         this.isLogin = true;
         this.user = auth.uid;
+        this.isAdmin = auth.uid == 'Fohqwou3qSNWS11t6hq3VL5TgVG2';
       } else {
         this.isLogin = false;
       }

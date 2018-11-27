@@ -17,6 +17,7 @@ export class WidokGrupaComponent implements OnInit {
   iduser: string;
   grupa: Grupa;
   public isAutor: boolean;
+  public isAdmin: boolean;
 
   url: string[] = window.location.href.split('/');
   idGrupa: string = this.url[4];
@@ -26,6 +27,7 @@ export class WidokGrupaComponent implements OnInit {
       if (auth) {
         this.isLogin = true;
         this.iduser = auth.uid;
+        this.isAdmin = auth.uid == 'Fohqwou3qSNWS11t6hq3VL5TgVG2';
       } else {
         this.isLogin = false;
       }  
