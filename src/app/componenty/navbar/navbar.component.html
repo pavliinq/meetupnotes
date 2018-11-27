@@ -12,23 +12,13 @@
         </div>
       </a>
       <!-- MENU DESKTOPOWE-->
+
       <div class="menu">
         <a *ngIf="!isLogin" routerLink="/logowanie">Zaloguj</a>
         <a *ngIf="!isLogin" routerLink="/rejestracja">Zarejestruj</a>
 
         <a *ngIf="isLogin" routerLink="/dodaj-grupe">Dodaj grupe</a>
         <a *ngIf="isLogin" routerLink="/grupy">Przeglądaj grupy</a>
-
-        <!-- <a class="dropdown show">
-          <a class="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Grupy
-          </a>
-          
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Dodaj nową grupę</a>
-            <a class="dropdown-item" href="#">Przeglądaj grupy</a>
-          </div>
-        </a>> -->
 
         <a *ngIf="isLogin" (click)="onClickLogout()">Wyloguj</a>
       
@@ -42,9 +32,7 @@
       <!-- MENU RESPONSYWNE -->
 
       <div class="open">
-
         <span class="cls"></span>
-
         <span>
           <ul class="sub-menu">
             <li>

@@ -16,7 +16,6 @@ import { LogowanieComponent } from './componenty/logowanie/logowanie.component';
 import { HomeComponent } from './componenty/home/home.component';
 import { NavbarComponent } from './componenty/navbar/navbar.component';
 import { RejestracjaComponent } from './componenty/rejestracja/rejestracja.component';
-import { NotFoundPageComponent } from './componenty/not-found-page/not-found-page.component';
 
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { FlashMessagesService } from 'angular2-flash-messages';
@@ -57,7 +56,6 @@ import { MojaListaGrupaComponent } from './componenty/grupy/moja-lista-grupa/moj
     HomeComponent,
     NavbarComponent,
     RejestracjaComponent,
-    NotFoundPageComponent,
     HomeUserComponent,
     DodajGrupaComponent,
     GrupaComponent,
