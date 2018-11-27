@@ -1,8 +1,9 @@
 <div class="row">
   <p> {{pytanie.pytanie}}</p>
 
-  <p class="number">Głosy: <a>{{numberOfLikes}}</a></p>
-  <a *ngIf="!autorPytanie && !autorPokoj && !isAdmin" class="btn-vote" (click)="giveLike()">Zagłosuj <i class="far fa-check-circle"></i></a>
+  <p *ngIf="!isAutorQuestion" class="number">Głosy: <a>{{numberOfLikes}}</a></p>
+  <a *ngIf="!autorPytanie && !autorPokoj && !isAdmin && !isAutorQuestion" class="btn-vote" (click)="giveLike()">Zagłosuj <i class="far fa-check-circle"></i></a>
   <a *ngIf="autorPytanie || autorPokoj || isAdmin" class="btn-delete" (click)="deletePytanie()">Usuń <i class="far fa-trash-alt"></i></a>
+  <a *ngIf="isAutorQuestion" class="btn-comment" [routerLink]="['/grupa/', url[4], url[5], pytanie.id]">Odpowiedz <i class="far fa-comment"></i></a>
 </div> 
 

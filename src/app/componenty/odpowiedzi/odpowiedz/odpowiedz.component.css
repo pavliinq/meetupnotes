@@ -5,20 +5,7 @@
     display: inline;
 }
 
-.row p a {
-    font-size: 20px;
-    text-decoration: none;
-    color: #cb9b24;
-}
-
-.number {
-    float: right;
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    padding: 0 30px;
-}
-
-.btn-delete, .btn-vote, .btn-comment {
+.btn-delete {
     float: right;
     cursor: pointer;
     text-decoration: none;
@@ -26,8 +13,4 @@
     font-family: 'Raleway', sans-serif;
     margin-top: 6px;
     padding-right: 15px;
-}
-
-.btn-comment {
-    color: red;
 }

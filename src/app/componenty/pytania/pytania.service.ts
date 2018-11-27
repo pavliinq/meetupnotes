@@ -13,7 +13,7 @@ export class PytaniaService {
   pytanieCollection: AngularFirestoreCollection<Pytanie[]>;
   pytanie: Observable<Pytanie[]>
 
-  constructor(private db: AngularFirestore, public as: AuthService) {
+  constructor(private db: AngularFirestore) {
 
    }
 

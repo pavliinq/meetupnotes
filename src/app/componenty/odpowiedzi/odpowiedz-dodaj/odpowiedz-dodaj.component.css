@@ -1,0 +1,80 @@
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .form-control {
+    border: 2px solid #ffffff; 
+    border-radius: 3px;
+    height:50px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .btn-main {
+    font-family: 'Raleway', sans-serif;
+    color: #dbc43e;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    padding: 12px 10px;
+    text-decoration: none;
+    background: rgb(241, 240, 240);
+    border-radius: 3px;
+    border: 2px solid #dbc43e;
+    margin-top: 20px;
+  }
+  
+  .calosc{
+  background: rgba(219, 218, 209, 0.5);
+  padding: 20px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 220px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  }
+  
+  .centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+  }
+  
+  .tlo-container {
+    height: 600px;
+    background-image: url("https://images.pexels.com/photos/7100/iphone-desk-laptop-notebook.jpg?auto=compress&cs=tinysrgb&h=750&w=1260"); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  p {
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    color: #dbc43e;
+  }
+  
+  @media (max-width: 500px) {
+    .calosc {
+      margin-top: 150px;
+      width: 300px;
+    }
+  
+    .tlo-container {
+      height: 500px;
+    }
+  
+    .btn-main {
+      font-size: 10px;
+    }
+  }

@@ -16,6 +16,7 @@ import { DodajSlowoComponent } from './componenty/slowa/dodaj-slowo/dodaj-slowo.
 import { DodajPytanieComponent } from './componenty/pytania/dodaj-pytanie/dodaj-pytanie.component';
 import { ZapiszComponent } from './componenty/pokoje/zapisz/zapisz.component';
 import { MojaListaGrupaComponent } from './componenty/grupy/moja-lista-grupa/moja-lista-grupa.component';
+import { OdpowiedzDodajComponent } from './componenty/odpowiedzi/odpowiedz-dodaj/odpowiedz-dodaj.component';
 
 const routes: Routes = [
   {path: 'logowanie', component: LogowanieComponent},
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path: 'grupa/:grupa_id/:pokoj_id', component: PokojWidokComponent, canActivate: [AuthGuard]},
   {path: 'grupa/:grupa_id/:pokoj_id/dodaj-slowo', component: DodajSlowoComponent, canActivate: [AuthGuard]},
   {path: 'grupa/:grupa_id/:pokoj_id/dodaj-pytanie', component: DodajPytanieComponent},
+  {path: 'grupa/:grupa_id/:pokoj_id/:pytanie_id', component: OdpowiedzDodajComponent},
   {path: 'zapisz/:grupa_id/:pokoj_id', component: ZapiszComponent},
 ];
 

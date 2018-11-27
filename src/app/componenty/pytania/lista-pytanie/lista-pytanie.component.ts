@@ -13,7 +13,6 @@ export class ListaPytanieComponent implements OnInit {
 
   public url:string[] = window.location.href.split('/');
   pytanie: Pytanie[];
-  autor: string;
   values: string = '';
   modo: boolean;
 

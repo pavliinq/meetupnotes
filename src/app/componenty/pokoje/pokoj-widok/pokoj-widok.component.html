@@ -4,11 +4,17 @@
     <div class="tlo-container">
       <div class="container">
         
-        <h1>{{grupa.nazwa}}</h1>
-        <p>{{pokoj.nazwa}}</p>
+        <h1 *ngIf="grupa">{{grupa.nazwa}}</h1>
+        <p *ngIf="pokoj">{{pokoj.nazwa}}</p>
       </div>
     </div>
   </main>
+
+  <section *ngIf="autorPokoj" class="supporting">
+    <div class="przyciski">
+        <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-pytanie']">Dodaj pytanie dla uczestników</a>
+    </div>
+  </section>
 
   <section *ngIf="!autorPokoj && !isAdmin" class="supporting">
   <div class="przyciski">

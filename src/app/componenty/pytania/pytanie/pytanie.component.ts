@@ -21,6 +21,7 @@ export class PytanieComponent implements OnInit {
   autorPytanie: boolean;
   autorPokoj: boolean;
   isAdmin: boolean;
+  isAutorQuestion: boolean;
 
   numberOfLikes: number;
 
@@ -40,6 +41,7 @@ export class PytanieComponent implements OnInit {
   this.pokojService.getPokoj(this.url[4]).subscribe( data => {
     this.pokoj = data.filter(p => p.id == this.url[5])[0];
     this.czyAutorPokoj();
+    this.czyPytanieAutor();
   });
    }
 
@@ -49,6 +51,10 @@ export class PytanieComponent implements OnInit {
 
   czyAutorPokoj() {
     this.autorPokoj = this.user == this.pokoj.autor;
+  }
+
+  czyPytanieAutor() {
+    this.isAutorQuestion = this.pokoj.autor == this.pytanie.autor;
   }
 
   deletePytanie() {
