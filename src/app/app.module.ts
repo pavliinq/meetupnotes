@@ -98,6 +98,7 @@ import { OdpowiedzComponent } from './componenty/odpowiedzi/odpowiedz/odpowiedz.
     FlashMessagesModule,
     AngularFontAwesomeModule,
   ],
+
   providers: [AuthService, 
     AuthGuard, 
     FlashMessagesService, 
