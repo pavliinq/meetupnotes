@@ -1,6 +1,5 @@
 <div class="row">
   <p> {{pytanie.pytanie}}</p>
-
   <p *ngIf="!isAutorQuestion" class="number">Głosy: <a>{{numberOfLikes}}</a></p>
   <a *ngIf="!autorPytanie && !autorPokoj && !isAdmin && !isAutorQuestion" class="btn-vote" (click)="giveLike()">Zagłosuj <i class="far fa-check-circle"></i></a>
   <a *ngIf="autorPytanie || autorPokoj || isAdmin" class="btn-delete" (click)="deletePytanie()">Usuń <i class="far fa-trash-alt"></i></a>

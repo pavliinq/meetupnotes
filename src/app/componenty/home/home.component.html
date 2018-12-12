@@ -1,45 +1,39 @@
 <body>
   <main>
-      <div class="tlo-container">
-        <div class="container">  
-          <h1>Witaj w MeetUpNotes!</h1>
-          <a class="btn-main" [routerLink]="['/logowanie']"> Zaloguj </a>
-          <br>
-          <p>Jesteś nowy? Nie posiadasz jeszcze konta?</p>
-          <a class="btn-main" [routerLink]="['/rejestracja']"> Dołącz do nas! </a>
-
-        </div>
+    <div class="tlo-container">
+      <div class="container">  
+        <h1>Witaj w MeetUpNotes!</h1>
+        <a class="btn-main" [routerLink]="['/logowanie']"> Zaloguj </a>
+        <br>
+        <p>Jesteś nowy? Nie posiadasz jeszcze konta?</p>
+        <a class="btn-main" [routerLink]="['/rejestracja']"> Dołącz do nas! </a>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <section class="supporting">
-      <div class="container">
-        
-        <div class="col">
-            <i class="fas fa-users fa-3x"></i>          <h2>Twórz grupy i pokoje</h2>
-          <p>Dodawaj nowe grupy dla swoich spotkań i zapraszaj do nich uczestników.</p>
-          <a class="btn" routerLink="/dodaj-grupe"> Dodaj grupę</a><br>
-        </div>
-        
-        <div class="col">
-            <i class="fas fa-assistive-listening-systems fa-3x"></i>          <h2>Nadzoruj przebieg spotkania</h2>
-          <p>Miej kontrolę nad spotkaniem obserwując specjalny panel live.</p>
-          <a class="btn" routerLink="/grupy"> Moje grupy</a><br>
-        </div>
-        
-        <div class="col">
-          <i class="fas fa-pen fa-3x"></i>
-          <h2>Bądź aktywnym uczestnikiem</h2>
-          <p>Zapisuj niezrozumiałe słowa i notuj interesujące Cię pytania, by inni też je widzieli.</p>
-          <a class="btn" routerLink="/grupy"> Znajdź grupę</a><br>
-        </div>
-        
+  <section class="supporting">
+    <div class="container">
+      <div class="col">
+        <i class="fas fa-users fa-3x"></i>          
+        <h2>Twórz grupy i pokoje</h2>
+        <p>Dodawaj nowe grupy dla swoich spotkań i zapraszaj do nich uczestników.</p>
+        <a class="btn" routerLink="/dodaj-grupe"> Dodaj grupę</a><br>
       </div>
-    </section>
-
-    <!-- <footer>
-      <div class="container">
-        <p>&copy; MeetUpNotes 2018</p>
+        
+      <div class="col">
+        <i class="fas fa-assistive-listening-systems fa-3x"></i>          
+        <h2>Nadzoruj przebieg spotkania</h2>
+        <p>Miej kontrolę nad spotkaniem obserwując specjalny panel live.</p>
+        <a class="btn" routerLink="/grupy"> Moje grupy</a><br>
       </div>
-    </footer> -->
-  </body>
+        
+      <div class="col">
+        <i class="fas fa-pen fa-3x"></i>
+        <h2>Bądź aktywnym uczestnikiem</h2>
+        <p>Zapisuj niezrozumiałe słowa i notuj interesujące Cię pytania, by inni też je widzieli.</p>
+        <a class="btn" routerLink="/grupy"> Znajdź grupę</a><br>
+      </div>
+        
+    </div>
+  </section>
+</body>

@@ -1,14 +1,10 @@
 <body>
-    <main class="tlo-container">
-
-        <div class="container centered">
-
-
+  <main class="tlo-container">
+    <div class="container centered">
       <form ngForm #f="ngForm" (ngSubmit)="dodajOdpowiedz(f)"  style="margin: 20px"  >
-      <div class="calosc">
-        <div class="form-group row ">
+        <div class="calosc">
+          <div class="form-group row ">
             <p *ngIf="pytanie">{{pytanie.pytanie}}</p>
-
             <textarea
             id="odpowiedz" 
             (keyup.enter)="dodajOdpowiedz(f)"
@@ -20,16 +16,15 @@
             minlength="3"
             maxlength="1000"
             #odpowiedz="ngModel" cols="1" rows="5" style="resize:none">
-          </textarea>
-           <button  class="btn-main" [routerLink]="['/grupa',url[4], url[5]]" title="Wróć do widoku pokoju">Wróć do pokoju</button>
-           <button  class="btn-main" [disabled]="!f.form.valid">Dodaj odpowiedz</button>     
-      </div>
-      </div>
-    </form>
+            </textarea>
+            <button  class="btn-main" [routerLink]="['/grupa',url[4], url[5]]" title="Wróć do widoku pokoju">Wróć do pokoju</button>
+            <button  class="btn-main" [disabled]="!f.form.valid">Dodaj odpowiedz</button>     
+          </div>
+        </div>
+      </form>
     </div>
-    </main>
-    <div class="container">
-      <app-odpowiedz-lista></app-odpowiedz-lista>
-    </div>
-
+  </main>
+  <div class="container">
+    <app-odpowiedz-lista></app-odpowiedz-lista>
+  </div>
 </body>

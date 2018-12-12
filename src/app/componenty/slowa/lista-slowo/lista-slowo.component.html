@@ -1,17 +1,17 @@
 <ng-container>
-<h1>Dodane słowa:</h1>
-<div class="buttons">
-  <input class="szukaj" (keyup.control.1)="onKeydown($event)" (keyup)="onKey($event)" placeholder="Szukaj">
-</div>
-<br>
-<br>
-<hr>
+  <h1>Dodane słowa:</h1>
+  <div class="buttons">
+    <input class="szukaj" (keyup.control.1)="onKeydown($event)" (keyup)="onKey($event)" placeholder="Szukaj">
+  </div>
+  <br>
+  <br>
+  <hr>
 
-<ul>
-  <ng-container *ngFor="let s of slowo">
-          <li class="lista-slowo-item slowoStyle">
-               <app-slowo [slowo]="s"></app-slowo>
-          </li>
-  </ng-container>
-</ul>
+  <ul>
+    <ng-container *ngFor="let s of slowo">
+      <li class="lista-slowo-item slowoStyle">
+        <app-slowo [slowo]="s"></app-slowo>
+      </li>
+    </ng-container>
+  </ul>
 </ng-container>

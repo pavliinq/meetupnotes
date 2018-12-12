@@ -1,9 +1,7 @@
 <body>
-  
   <main>
     <div class="tlo-container">
       <div class="container">
-        
         <h1 *ngIf="grupa">{{grupa.nazwa}}</h1>
         <p *ngIf="pokoj">{{pokoj.nazwa}}</p>
       </div>
@@ -12,15 +10,15 @@
 
   <section *ngIf="autorPokoj" class="supporting">
     <div class="przyciski">
-        <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-pytanie']">Dodaj pytanie dla uczestników</a>
+      <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-pytanie']">Dodaj pytanie dla uczestników</a>
     </div>
   </section>
 
   <section *ngIf="!autorPokoj && !isAdmin" class="supporting">
-  <div class="przyciski">
-    <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-slowo']">Dodaj Slowo</a>
-    <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-pytanie']">Dodaj Pytanie</a>
-  </div>
+    <div class="przyciski">
+      <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-slowo']">Dodaj Slowo</a>
+      <a class="btn-main" [routerLink]="['/grupa/',url[4], url[5],'dodaj-pytanie']">Dodaj Pytanie</a>
+    </div>
   </section>
   <hr>
   <div class="container">
@@ -33,6 +31,6 @@
   </div>
   <br>
   <div *ngIf="autorPokoj || isAdmin" class="container-usun">
-  <a (click)="DeletePokoj(url[5], url[4])" [routerLink]="['/grupa/',url[4]]">Usuń pokój <i class="far fa-trash-alt"></i></a> 
-</div>
+    <a (click)="DeletePokoj(url[5], url[4])" [routerLink]="['/grupa/',url[4]]">Usuń pokój <i class="far fa-trash-alt"></i></a> 
+  </div>
 </body>

@@ -1,24 +1,23 @@
 <body>
-    <main class="tlo-container">
+  <main class="tlo-container">
     <div class="container centered">
-  <form ngForm #f="ngForm" (ngSubmit)="dodajPytanie(f)" style="margin: 20px">
-      <div class="calosc">
-    <div class="form-group row">
-      <input 
-          id="pytanie" 
-          type="text" 
-          class="form-control col-4" 
-          placeholder="Wprowadź pytanie"
-          ngModel name="pytanie"  #pytanie="ngModel"
-          required minlength="2">    
-      <button class="btn-main" [disabled]="!f.form.valid">Dodaj</button>
+      <form ngForm #f="ngForm" (ngSubmit)="dodajPytanie(f)" style="margin: 20px">
+        <div class="calosc">
+          <div class="form-group row">
+            <input 
+                id="pytanie" 
+                type="text" 
+                class="form-control col-4" 
+                placeholder="Wprowadź pytanie"
+                ngModel name="pytanie"  #pytanie="ngModel"
+                required minlength="2">    
+            <button class="btn-main" [disabled]="!f.form.valid">Dodaj</button>
+          </div>
+        </div>
+      </form>
     </div>
-    </div>
-  </form>
-  </div>
-  </main>
- 
+  </main> 
   <div class="container">
-  <app-lista-pytanie></app-lista-pytanie>
+    <app-lista-pytanie></app-lista-pytanie>
   </div>
 </body>

@@ -1,33 +1,32 @@
 <body>
-    <main>
-        <div class="tlo-container">
+  <main>
+    <div class="tlo-container">
       <div class="conatiner centered">
 
-    <form ngForm #f="ngForm" (ngSubmit)="dodajPokoj(f)" style="margin: 20px">
-        <div class="calosc">
-      <h1>Utwórz nowy pokój</h1>
-   
-      <div class="card-body" style="margin: 50px">
-        <div class="row">
-          <div class="form-group">
-              <label 
-              for="nazwaPokoj" 
-              class="col-form-label" 
-              style="font-size:120%" >Nazwa Pokoju:</label>
-              <input class="form-control" id="nazwaPokoj"requried ngModel name ="nazwaPokoj" type="text" #nazwaPokoj ="ngModel">
-            
-              <label for="hasloPokoj"  
-              class="col-form-label"
-              style="font-size:120%" >Hasło dostępu:</label>
-              <input class="form-control" id="hasloPokoj" required ngModel name="hasloPokoj" type="text" #hasloPokoj="ngModel">
-
+        <form ngForm #f="ngForm" (ngSubmit)="dodajPokoj(f)" style="margin: 20px">
+          <div class="calosc">
+            <h1>Utwórz nowy pokój</h1>
+      
+            <div class="card-body" style="margin: 50px">
+              <div class="row">
+                <div class="form-group">
+                  <label 
+                  for="nazwaPokoj" 
+                  class="col-form-label" 
+                  style="font-size:120%" >Nazwa Pokoju:</label>
+                  <input class="form-control" id="nazwaPokoj"requried ngModel name ="nazwaPokoj" type="text" #nazwaPokoj ="ngModel">
+                    
+                  <label for="hasloPokoj"  
+                  class="col-form-label"
+                  style="font-size:120%" >Hasło dostępu:</label>
+                  <input class="form-control" id="hasloPokoj" required ngModel name="hasloPokoj" type="text" #hasloPokoj="ngModel">
+                </div>
+              </div>
+              <button type="button" class="btn-main" [disabled]="!f.form.valid" (click)="dodajPokoj(f)" type="submit" *ngIf="grupa" [routerLink]="['/grupa', grupa.id] "> Utwórz pokój </button>
             </div>
           </div>
-          <button type="button" class="btn-main" [disabled]="!f.form.valid" (click)="dodajPokoj(f)" type="submit" *ngIf="grupa" [routerLink]="['/grupa', grupa.id] "> Utwórz pokój </button>
-        </div>
-      </div>
-      </form>
+        </form>
       </div>
     </div>
-    </main>
-    </body>
+  </main>
+</body>

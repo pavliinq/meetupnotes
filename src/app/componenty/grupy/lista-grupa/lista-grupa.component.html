@@ -1,16 +1,15 @@
 <ng-container>
-<div class="buttons">
-  <input class="szukaj" (keyup.control.1)="onKeydown($event)" (keyup)="onKey($event)" placeholder="Szukaj">
-</div>
-<br>
-<br>
-<hr>
-
-<ul>
-    <ng-container *ngFor="let g of grupy">
+    <div class="buttons">
+        <input class="szukaj" (keyup.control.1)="onKeydown($event)" (keyup)="onKey($event)" placeholder="Szukaj">
+    </div>
+    <br>
+    <br>
+    <hr>
+    <ul>
+        <ng-container *ngFor="let g of grupy">
             <li class="list-group-item col-sm-3 grupaStyle">
                 <app-grupa [grupa]="g"></app-grupa>
             </li>
-    </ng-container>
-</ul>
+        </ng-container>
+    </ul>
 </ng-container>

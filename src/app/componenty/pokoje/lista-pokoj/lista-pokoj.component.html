@@ -1,11 +1,10 @@
 <ng-container>
-<h1>Utworzone pokoje:</h1>
-
-<ul>
-    <ng-container *ngFor="let p of pokoje">
+    <h1>Utworzone pokoje:</h1>
+    <ul>
+        <ng-container *ngFor="let p of pokoje">
             <li class="lista-pokoj-item  pokojStyle">
-                 <app-pokoj [pokoj]="p"></app-pokoj>
+                <app-pokoj [pokoj]="p"></app-pokoj>
             </li>
-    </ng-container>
-</ul>
+        </ng-container>
+    </ul>
 </ng-container>

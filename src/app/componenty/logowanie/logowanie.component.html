@@ -1,32 +1,27 @@
 <body>
   <main>
-  <div class="tlo-container">
-    <div class="container centered">
-
-  
-    <form (submit)="onSubmitLogin()">
-        <div class="calosc">
-      <h1 class="text-center" align="center">Zaloguj do MeetUpNotes</h1>
-          
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" [(ngModel)]="email" class="form-control">
+    <div class="tlo-container">
+      <div class="container centered">
+        <form (submit)="onSubmitLogin()">
+          <div class="calosc">
+            <h1 class="text-center" align="center">Zaloguj do MeetUpNotes</h1>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" [(ngModel)]="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="password">Hasło</label>
+              <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control">
+            </div>
+            <div class="form-group">
+              <input class='btn-main' type="submit" value="Zaloguj się">
+            </div>
+            <p>lub</p>
+            <br>
+            <a class="btn-main-google"  (click)="onClickGoogleLogin()"><i class="fab fa-google"></i>&nbsp;&nbsp;Zaloguj się z Google</a>
+          </div>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="password">Hasło</label>
-        <input type="password" name="password" id="password" [(ngModel)]="password" class="form-control">
-      </div>
-      <div class="form-group">
-
-        <input class='btn-main' type="submit" value="Zaloguj się">
-      </div>
-      <p>lub</p>
-      <br>
-      <a class="btn-main-google"  (click)="onClickGoogleLogin()"><i class="fab fa-google"></i>&nbsp;&nbsp;Zaloguj się z Google</a>
-      </div>
-    </form>
-
     </div>
-  </div>
   </main>
 </body>

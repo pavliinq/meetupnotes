@@ -1,40 +1,37 @@
 <body>
   <main>
-  <div class="tlo-container">
-    <div class="container">
-      <h1>Witaj <b>{{nazwaUzytkownika}}</b>!</h1>
-
-      <p class="lead">Jesteś nowy? Już dziś poznaj zalety korzystania z aplikacji MeetUpNotes!</p>
-      <p>Aby stworzyć nową grupę na twoje spotkanie przejdź do zakładki  <b><a class="przejdz" [routerLink]="['/dodaj-grupe']">Dodaj grupę</a>.</b></p>
-      <p>Jeśli jesteś uczestnikiem, znajdź interesującą Cię grupę, po czym dodaj się do pokoju i korzystaj z możliwośći aktywnego uczestnictwa!</p>
+    <div class="tlo-container">
+      <div class="container">
+        <h1>Witaj <b>{{nazwaUzytkownika}}</b>!</h1>
+        <p class="lead">Jesteś nowy? Już dziś poznaj zalety korzystania z aplikacji MeetUpNotes!</p>
+        <p>Aby stworzyć nową grupę na twoje spotkanie przejdź do zakładki  <b><a class="przejdz" [routerLink]="['/dodaj-grupe']">Dodaj grupę</a>.</b></p>
+        <p>Jeśli jesteś uczestnikiem, znajdź interesującą Cię grupę, po czym dodaj się do pokoju i korzystaj z możliwośći aktywnego uczestnictwa!</p>
+      </div>
     </div>
-  </div>
   </main>
 
   <section class="supporting">
-      <div class="container">
-        
-        <div class="col">
-            <i class="fas fa-users fa-3x"></i>   
-            <h2>Twórz grupy i pokoje</h2>
-          <p>Dodawaj nowe grupy dla swoich spotkań i zapraszaj do nich uczestników.</p>
-          <a class="btn" routerLink="/dodaj-grupe"> Dodaj grupę</a><br>
-        </div>
-        
-        <div class="col">
-            <i class="fas fa-assistive-listening-systems fa-3x"></i>  
-            <h2>Nadzoruj przebieg spotkania</h2>
-          <p>Miej kontrolę nad spotkaniem obserwując specjalny panel live.</p>
-          <a class="btn" routerLink="/grupy"> Moje grupy</a><br>
-        </div>
-        
-        <div class="col">
-          <i class="fas fa-pen fa-3x"></i>
-          <h2>Bądź aktywnym uczestnikiem</h2>
-          <p>Zapisuj niezrozumiałe słowa i notuj interesujące Cię pytania, by inni też je widzieli.</p>
-          <a class="btn" routerLink="/grupy"> Znajdź grupę</a><br>
-        </div>
-        
+    <div class="container">
+      <div class="col">
+        <i class="fas fa-users fa-3x"></i>   
+        <h2>Twórz grupy i pokoje</h2>
+        <p>Dodawaj nowe grupy dla swoich spotkań i zapraszaj do nich uczestników.</p>
+        <a class="btn" routerLink="/dodaj-grupe"> Dodaj grupę</a><br>
       </div>
-    </section>
+        
+      <div class="col">
+        <i class="fas fa-assistive-listening-systems fa-3x"></i>  
+        <h2>Nadzoruj przebieg spotkania</h2>
+        <p>Miej kontrolę nad spotkaniem obserwując specjalny panel live.</p>
+        <a class="btn" routerLink="/grupy"> Moje grupy</a><br>
+      </div>
+        
+      <div class="col">
+        <i class="fas fa-pen fa-3x"></i>
+        <h2>Bądź aktywnym uczestnikiem</h2>
+        <p>Zapisuj niezrozumiałe słowa i notuj interesujące Cię pytania, by inni też je widzieli.</p>
+        <a class="btn" routerLink="/grupy"> Znajdź grupę</a><br>
+      </div>    
+    </div>
+  </section>
 </body>

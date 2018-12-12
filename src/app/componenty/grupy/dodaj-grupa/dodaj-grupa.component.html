@@ -1,42 +1,40 @@
 <body>
   <main>
-      <div class="tlo-container">
-    <div class="conatiner centered">
+    <div class="tlo-container">
+      <div class="conatiner centered">
 
 
-  <form ngForm #f="ngForm" (ngSubmit)="dodajGrupe(f)" style="margin: 20px">
-      <div class="calosc">
-<h1>Stwórz nową grupę</h1>
+        <form ngForm #f="ngForm" (ngSubmit)="dodajGrupe(f)" style="margin: 20px">
+          <div class="calosc">
+            <h1>Stwórz nową grupę</h1>
  
-    <div class="card-body" style="margin: 50px">
-      <div class="row">
-        <div class="form-group">
-            <label 
-            for="nazwaGrupa" 
-            class="col-form-label" 
-            style="font-size:120%" >Nazwa Grupy:</label>
-            <input class="form-control" id="nazwaGrupa" requried ngModel name ="nazwaGrupa" required type="text" class="form-control"
-            #nazwaGrupa ="ngModel">
+            <div class="card-body" style="margin: 50px">
+              <div class="row">
+                <div class="form-group">
+                  <label 
+                  for="nazwaGrupa" 
+                  class="col-form-label" 
+                  style="font-size:120%" >Nazwa Grupy:</label>
+                  <input class="form-control" id="nazwaGrupa" requried ngModel name ="nazwaGrupa" required type="text" class="form-control"
+                  #nazwaGrupa ="ngModel">
 
-            <label for="miasto" class="col-form-label" style="font-size:120%">Miasto:</label>
-            <input class="form-control" id="miasto" requried ngModel name="miasto" required type="text" class="form-control" #miasto="ngModel">
+                  <label for="miasto" class="col-form-label" style="font-size:120%">Miasto:</label>
+                  <input class="form-control" id="miasto" requried ngModel name="miasto" required type="text" class="form-control" #miasto="ngModel">
 
-            <label for="prowadzacy" class="col-form-label" style="font-size:120%">Prowadzący/Organizacja:</label>
-            <input class="form-control" id="prowadzacy" requried ngModel name ="prowadzacy" required type="text" class="form-control"
-            #prowadzacy ="ngModel" >
+                  <label for="prowadzacy" class="col-form-label" style="font-size:120%">Prowadzący/Organizacja:</label>
+                  <input class="form-control" id="prowadzacy" requried ngModel name ="prowadzacy" required type="text" class="form-control"
+                  #prowadzacy ="ngModel" >
 
-            <label for="opis" class="col-form-label" style="font-size:120%"> Opis grupy:</label>
-            <textarea  id="opis" requried ngModel name ="opis" required type="text" class="form-control"
-            #opis ="ngModel" ></textarea>
-
+                  <label for="opis" class="col-form-label" style="font-size:120%"> Opis grupy:</label>
+                  <textarea  id="opis" requried ngModel name ="opis" required type="text" class="form-control"
+                  #opis ="ngModel" ></textarea>
+                </div>
+              </div>
+              <button type="button" class="btn-main" [disabled]="!f.form.valid" (click)="dodajGrupe(f)" type="submit" routerLink="/grupy"> Stwórz grupę </button>
+            </div>
           </div>
-        </div>
-        <button type="button" class="btn-main" [disabled]="!f.form.valid" (click)="dodajGrupe(f)" type="submit" routerLink="/grupy"> Stwórz grupę </button>
+        </form>
       </div>
     </div>
-    </form>
- 
-  </div>
-  </div>
   </main>
-  </body>
+</body>

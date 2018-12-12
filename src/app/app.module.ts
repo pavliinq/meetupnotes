@@ -48,8 +48,6 @@ import { DodajPytanieComponent } from './componenty/pytania/dodaj-pytanie/dodaj-
 import { ListaPytanieComponent } from './componenty/pytania/lista-pytanie/lista-pytanie.component';
 import { FooterComponent } from './componenty/footer/footer.component';
 import { MojaListaGrupaComponent } from './componenty/grupy/moja-lista-grupa/moja-lista-grupa.component';
-import { PytanieProwadzacyComponent } from './componenty/pytania/pytania-prowadzacy/pytanie-prowadzacy/pytanie-prowadzacy.component';
-import { PytaniaProwadzacyService } from './componenty/pytania/pytania-prowadzacy/pytania-prowadzacy.service';
 import { OdpowiedzListaComponent } from './componenty/odpowiedzi/odpowiedz-lista/odpowiedz-lista.component';
 import { OdpowiedzDodajComponent } from './componenty/odpowiedzi/odpowiedz-dodaj/odpowiedz-dodaj.component';
 import { OdpowiedzService } from './componenty/odpowiedzi/odpowiedz.service';
@@ -81,7 +79,6 @@ import { OdpowiedzComponent } from './componenty/odpowiedzi/odpowiedz/odpowiedz.
     ListaPytanieComponent,
     FooterComponent,
     MojaListaGrupaComponent,
-    PytanieProwadzacyComponent,
     OdpowiedzListaComponent,
     OdpowiedzDodajComponent,
     OdpowiedzComponent
@@ -106,7 +103,6 @@ import { OdpowiedzComponent } from './componenty/odpowiedzi/odpowiedz/odpowiedz.
     PokojService, 
     SlowaService, 
     PytaniaService, 
-    PytaniaProwadzacyService, 
     OdpowiedzService,
     ],
   bootstrap: [AppComponent]

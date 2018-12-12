@@ -1,17 +1,16 @@
 <ng-container>
-<h1>Dodane pytania:</h1>
-<div class="buttons">
-  <input class="szukaj" (keyup.control.1)="onKeydown($event)" (keyup)="onKey($event)" placeholder="Szukaj">
-</div> 
-<br>
-<br>
-<hr>
-
-<ul>
-  <ng-container *ngFor="let p of pytanie">
-          <li class="lista-pytanie-item pytanieStyle">
-               <app-pytanie [pytanie]="p"></app-pytanie>
-          </li>
-  </ng-container>
-</ul>
+  <h1>Dodane pytania:</h1>
+  <div class="buttons">
+    <input class="szukaj" (keyup.control.1)="onKeydown($event)" (keyup)="onKey($event)" placeholder="Szukaj">
+  </div> 
+  <br>
+  <br>
+  <hr>
+  <ul>
+    <ng-container *ngFor="let p of pytanie">
+      <li class="lista-pytanie-item pytanieStyle">
+        <app-pytanie [pytanie]="p"></app-pytanie>
+      </li>
+    </ng-container>
+  </ul>
 </ng-container>

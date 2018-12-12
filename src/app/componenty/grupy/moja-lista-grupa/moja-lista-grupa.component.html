@@ -5,12 +5,11 @@
   <br>
   <br>
   <hr>
-  
   <ul>
-      <ng-container *ngFor="let g of grupy">
-              <li class="list-group-item col-sm-3 grupaStyle">
-                  <app-grupa [grupa]="g"></app-grupa>
-              </li>
-      </ng-container>
+    <ng-container *ngFor="let g of grupy">
+      <li class="list-group-item col-sm-3 grupaStyle">
+        <app-grupa [grupa]="g"></app-grupa>
+      </li>
+    </ng-container>
   </ul>
-  </ng-container>
+</ng-container>
